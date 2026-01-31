@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 public class PopUpController : MonoBehaviour
 {
-    [SerializeField, TextArea] private string popUpText;
+    [SerializeField, TextArea] public string popUpText;
     [SerializeField] private TextMeshProUGUI bubbleText;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
