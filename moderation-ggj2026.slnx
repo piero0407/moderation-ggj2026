@@ -1,6 +1,3 @@
 ﻿<Solution>
   <Project Path="RMC.MyProject.Runtime.csproj" />
-  <Project Path="RMC.MyProject.Editor.Tests.csproj" />
-  <Project Path="RMC.MyProject.Editor.csproj" />
-  <Project Path="RMC.MyProject.Runtime.Tests.csproj" />
 </Solution>
