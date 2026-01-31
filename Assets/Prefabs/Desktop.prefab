@@ -450,6 +450,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9047305760175962644, guid: 0faac02e09901364398624ecad6af0d3, type: 3}
+      propertyPath: availableWindows.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9047305760175962644, guid: 0faac02e09901364398624ecad6af0d3, type: 3}
+      propertyPath: 'availableWindows.Array.data[0]'
+      value: 
+      objectReference: {fileID: 5663439214190881942}
+    - target: {fileID: 9047305760175962644, guid: 0faac02e09901364398624ecad6af0d3, type: 3}
+      propertyPath: 'availableWindows.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5377894055898569279}
+    - target: {fileID: 9047305760175962644, guid: 0faac02e09901364398624ecad6af0d3, type: 3}
+      propertyPath: 'availableWindows.Array.data[2]'
+      value: 
+      objectReference: {fileID: 6121135222243094687}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

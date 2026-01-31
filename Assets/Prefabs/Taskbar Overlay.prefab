@@ -286,7 +286,6 @@ GameObject:
   - component: {fileID: 5149893188995532526}
   - component: {fileID: 6991352734842843953}
   - component: {fileID: 1244515870675881655}
-  - component: {fileID: 3612641013594716034}
   m_Layer: 0
   m_Name: Task Button
   m_TagString: Untagged
@@ -397,31 +396,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3612641013594716034}
+      - m_Target: {fileID: 9047305760175962644}
         m_TargetAssemblyTypeName: ToggleWindow, RMC.MyProject.Runtime
         m_MethodName: ToggleWindowVisibility
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &3612641013594716034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1329904387467053722}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b8d3e6d3527d7d4cb517381d0a1a71b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  windowToToggle: {fileID: 0}
 --- !u!1 &1429636218602722043
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,7 +561,6 @@ GameObject:
   - component: {fileID: 3126421076196330690}
   - component: {fileID: 3269693020247106745}
   - component: {fileID: 1167332746982219258}
-  - component: {fileID: 6865366741698048258}
   m_Layer: 0
   m_Name: Task Button (1)
   m_TagString: Untagged
@@ -686,31 +671,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6865366741698048258}
+      - m_Target: {fileID: 9047305760175962644}
         m_TargetAssemblyTypeName: ToggleWindow, RMC.MyProject.Runtime
         m_MethodName: ToggleWindowVisibility
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &6865366741698048258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2938065127265672959}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b8d3e6d3527d7d4cb517381d0a1a71b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: RMC.MyProject.Runtime::ToggleWindow
-  windowToToggle: {fileID: 0}
 --- !u!1 &3053837485410163059
 GameObject:
   m_ObjectHideFlags: 0
@@ -872,6 +844,7 @@ GameObject:
   - component: {fileID: 3983215599607322224}
   - component: {fileID: 1940516119352289050}
   - component: {fileID: 5608942526233167246}
+  - component: {fileID: 9047305760175962644}
   m_Layer: 0
   m_Name: Taskbar Overlay
   m_TagString: Untagged
@@ -934,6 +907,19 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+--- !u!114 &9047305760175962644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3420425406607322122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b8d3e6d3527d7d4cb517381d0a1a71b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: RMC.MyProject.Runtime::ToggleWindow
+  availableWindows: []
 --- !u!1 &4115123476196531788
 GameObject:
   m_ObjectHideFlags: 0
@@ -1143,7 +1129,6 @@ GameObject:
   - component: {fileID: 6494581994121293321}
   - component: {fileID: 7916266973689887280}
   - component: {fileID: 44532199023594736}
-  - component: {fileID: 241115338062694398}
   m_Layer: 0
   m_Name: Task Button (2)
   m_TagString: Untagged
@@ -1254,31 +1239,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 241115338062694398}
+      - m_Target: {fileID: 9047305760175962644}
         m_TargetAssemblyTypeName: ToggleWindow, RMC.MyProject.Runtime
         m_MethodName: ToggleWindowVisibility
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &241115338062694398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5206725904549553682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b8d3e6d3527d7d4cb517381d0a1a71b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: RMC.MyProject.Runtime::ToggleWindow
-  windowToToggle: {fileID: 0}
 --- !u!1 &6821551789057351751
 GameObject:
   m_ObjectHideFlags: 0
