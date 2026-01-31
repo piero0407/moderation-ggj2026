@@ -360,6 +360,7 @@ GameObject:
   - component: {fileID: 27261280893826734}
   - component: {fileID: 5703387442891887889}
   - component: {fileID: 3829482322849744026}
+  - component: {fileID: 6884690249408745151}
   m_Layer: 0
   m_Name: Minimize
   m_TagString: Untagged
@@ -382,9 +383,9 @@ RectTransform:
   - {fileID: 167917377156880199}
   m_Father: {fileID: 5818196327706817907}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 17.333328, y: -15}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 32, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &27261280893826734
@@ -468,7 +469,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5703387442891887889}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6884690249408745151}
+        m_TargetAssemblyTypeName: MinimizeWindow, RMC.MyProject.Runtime
+        m_MethodName: DoMinimizeWindow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6884690249408745151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383370833982799613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3136478535dee84289a6e089745c765, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: RMC.MyProject.Runtime::MinimizeWindow
+  windowToToggle: {fileID: 4588443627153275416}
 --- !u!1 &1414903009167210289
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,7 +619,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8936720712944923431
 RectTransform:
   m_ObjectHideFlags: 0
@@ -924,9 +950,9 @@ RectTransform:
   - {fileID: 7846118492263085026}
   m_Father: {fileID: 5818196327706817907}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 84, y: -15}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 32, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &467841984722733148
@@ -1110,9 +1136,9 @@ RectTransform:
   - {fileID: 2593604886134713074}
   m_Father: {fileID: 5818196327706817907}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50.666664, y: -15}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 32, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &879824845709693680

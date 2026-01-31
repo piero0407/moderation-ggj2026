@@ -358,6 +358,7 @@ GameObject:
   - component: {fileID: 5882339913268243766}
   - component: {fileID: 2473856829437031299}
   - component: {fileID: 2131103696153726067}
+  - component: {fileID: 2773864005792222767}
   m_Layer: 0
   m_Name: Minimize
   m_TagString: Untagged
@@ -466,7 +467,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2473856829437031299}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2773864005792222767}
+        m_TargetAssemblyTypeName: MinimizeWindow, RMC.MyProject.Runtime
+        m_MethodName: DoMinimizeWindow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2773864005792222767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672052733526459951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3136478535dee84289a6e089745c765, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: RMC.MyProject.Runtime::MinimizeWindow
+  windowToToggle: {fileID: 2069853712814110273}
 --- !u!1 &2056371041864628215
 GameObject:
   m_ObjectHideFlags: 0

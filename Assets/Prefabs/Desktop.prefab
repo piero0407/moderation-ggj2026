@@ -82,9 +82,53 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5532536284872817824}
     m_Modifications:
+    - target: {fileID: 254673052139410512, guid: 0faac02e09901364398624ecad6af0d3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 254673052139410512, guid: 0faac02e09901364398624ecad6af0d3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 254673052139410512, guid: 0faac02e09901364398624ecad6af0d3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 254673052139410512, guid: 0faac02e09901364398624ecad6af0d3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167332746982219258, guid: 0faac02e09901364398624ecad6af0d3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167332746982219258, guid: 0faac02e09901364398624ecad6af0d3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167332746982219258, guid: 0faac02e09901364398624ecad6af0d3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5162569772524369474}
+    - target: {fileID: 1167332746982219258, guid: 0faac02e09901364398624ecad6af0d3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167332746982219258, guid: 0faac02e09901364398624ecad6af0d3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToggleWindowVisibility
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167332746982219258, guid: 0faac02e09901364398624ecad6af0d3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ToggleWindow, RMC.MyProject.Runtime
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167332746982219258, guid: 0faac02e09901364398624ecad6af0d3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1244515870675881655, guid: 0faac02e09901364398624ecad6af0d3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1244515870675881655, guid: 0faac02e09901364398624ecad6af0d3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -98,10 +142,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 984226940141751679}
-    - target: {fileID: 1244515870675881655, guid: 0faac02e09901364398624ecad6af0d3, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 8913680094986785701}
     - target: {fileID: 1244515870675881655, guid: 0faac02e09901364398624ecad6af0d3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -134,6 +174,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1368342548909993346, guid: 0faac02e09901364398624ecad6af0d3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368342548909993346, guid: 0faac02e09901364398624ecad6af0d3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368342548909993346, guid: 0faac02e09901364398624ecad6af0d3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368342548909993346, guid: 0faac02e09901364398624ecad6af0d3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3420425406607322122, guid: 0faac02e09901364398624ecad6af0d3, type: 3}
       propertyPath: m_Name
       value: Taskbar Overlay
@@ -141,7 +197,7 @@ PrefabInstance:
     - target: {fileID: 3612641013594716034, guid: 0faac02e09901364398624ecad6af0d3, type: 3}
       propertyPath: windowToToggle
       value: 
-      objectReference: {fileID: 5377894055898569279}
+      objectReference: {fileID: 5663439214190881942}
     - target: {fileID: 3983215599607322224, guid: 0faac02e09901364398624ecad6af0d3, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -226,10 +282,30 @@ PrefabInstance:
       propertyPath: windowToToggle
       value: 
       objectReference: {fileID: 5663439214190881942}
-    m_RemovedComponents: []
+    - target: {fileID: 8110298469713160335, guid: 0faac02e09901364398624ecad6af0d3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110298469713160335, guid: 0faac02e09901364398624ecad6af0d3, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110298469713160335, guid: 0faac02e09901364398624ecad6af0d3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110298469713160335, guid: 0faac02e09901364398624ecad6af0d3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4916171721905367384, guid: 0faac02e09901364398624ecad6af0d3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2938065127265672959, guid: 0faac02e09901364398624ecad6af0d3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5162569772524369474}
   m_SourcePrefab: {fileID: 100100000, guid: 0faac02e09901364398624ecad6af0d3, type: 3}
 --- !u!224 &634226380346141837 stripped
 RectTransform:
@@ -247,17 +323,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b8d3e6d3527d7d4cb517381d0a1a71b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
---- !u!114 &8913680094986785701 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4916171721905367384, guid: 0faac02e09901364398624ecad6af0d3, type: 3}
+--- !u!1 &1678745731335660546 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2938065127265672959, guid: 0faac02e09901364398624ecad6af0d3, type: 3}
   m_PrefabInstance: {fileID: 4578473017097927421}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+--- !u!114 &5162569772524369474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678745731335660546}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b8d3e6d3527d7d4cb517381d0a1a71b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: RMC.MyProject.Runtime::ToggleWindow
+  windowToToggle: {fileID: 5377894055898569279}
 --- !u!1001 &5918023521603394263
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -397,9 +480,57 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6276595710781296018}
     m_Modifications:
+    - target: {fileID: 2410387000917297184, guid: 55485105a0cb2a84fbf59cc659ed982a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2410387000917297184, guid: 55485105a0cb2a84fbf59cc659ed982a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2410387000917297184, guid: 55485105a0cb2a84fbf59cc659ed982a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2410387000917297184, guid: 55485105a0cb2a84fbf59cc659ed982a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4588443627153275416, guid: 55485105a0cb2a84fbf59cc659ed982a, type: 3}
       propertyPath: m_Name
       value: Notepad
+      objectReference: {fileID: 0}
+    - target: {fileID: 5076135709851496844, guid: 55485105a0cb2a84fbf59cc659ed982a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5076135709851496844, guid: 55485105a0cb2a84fbf59cc659ed982a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5076135709851496844, guid: 55485105a0cb2a84fbf59cc659ed982a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5076135709851496844, guid: 55485105a0cb2a84fbf59cc659ed982a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7410921618862110303, guid: 55485105a0cb2a84fbf59cc659ed982a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7410921618862110303, guid: 55485105a0cb2a84fbf59cc659ed982a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7410921618862110303, guid: 55485105a0cb2a84fbf59cc659ed982a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7410921618862110303, guid: 55485105a0cb2a84fbf59cc659ed982a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8936720712944923431, guid: 55485105a0cb2a84fbf59cc659ed982a, type: 3}
       propertyPath: m_Pivot.x
