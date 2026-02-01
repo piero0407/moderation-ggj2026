@@ -1,17 +1,21 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
+using Scriptable_Objects_Architecture.Runtime.Variables;
 
 public class PopUpController : MonoBehaviour
 {
     [SerializeField] DialogsData dialogsData;
-    [SerializeField, TextArea] public string popUpText;
-    string _popUpText;
+    [SerializeField, TextArea] private string _popUpText;
+    string popUpText;
     [SerializeField] private TextMeshProUGUI bubbleText;
-    [SerializeField] private float textFrequency = 30f;
-    [SerializeField] private float textTimer = 3f;
+    [SerializeField] private float wordFrequency = 30f;
+    [SerializeField] private float loopBubbleDuration = 5f;
+    [SerializeField] private float introBubbleDuration = 3f;
+    [SerializeField] private FloatVariable sanity;
     private float _timer = 0f;
 
-    private bool haveDialogReady = false;
+    private bool doingAnimation = false;
     private int introDialog = 0;
 
     int currentLetterIndex = 0;
@@ -23,22 +27,7 @@ public class PopUpController : MonoBehaviour
 
     void Start()
     {
-    }
-
-    public void SetPopUpText(bool isStartingDialog, int dialogIndex)
-    {
-        if (isStartingDialog)
-        {
-            _popUpText = dialogsData.StartingDialogs[dialogIndex];
-        }
-        else
-        {
-            _popUpText = dialogsData.LoopingDialogs[dialogIndex];
-        }
-        bubbleText.text = "";
-        currentLetterIndex = 0;
-        textTimer = 0f;
-        haveDialogReady = true;
+        _timer = introBubbleDuration;
     }
     void Update()
     {
@@ -50,7 +39,7 @@ public class PopUpController : MonoBehaviour
             case GameManager.GameState.LivestreamMax:
             case GameManager.GameState.None:
             case GameManager.GameState.Livestream:
-            if(haveDialogReady)
+            if(doingAnimation)
                 TextAnimation();
             else
                 GetNewTextIfNeeded();
@@ -60,43 +49,75 @@ public class PopUpController : MonoBehaviour
         }
     }
 
+    public void SetPopUpText(string dialogtext)
+    {
+        _popUpText = dialogtext;
+        bubbleText.text = "";
+        currentLetterIndex = 0;
+        _timer = 0f;
+        doingAnimation = true;
+    }
+
     private void GetNewTextIfNeeded()
     {
         _timer += Time.deltaTime;
-        if (_timer < textTimer)
+        if(introDialog < dialogsData.StartingDialogs.Length)
         {
-            if(introDialog < dialogsData.StartingDialogs.Length)
+            if (_timer >= introBubbleDuration)
             {
-                SetPopUpText(true, introDialog);
-                haveDialogReady = true;
+                SetPopUpText(dialogsData.StartingDialogs[introDialog]);
                 introDialog++;
-                if(introDialog >= dialogsData.StartingDialogs.Length - 1)
+                if(introDialog > dialogsData.StartingDialogs.Length - 1)
                 {
                     GameManager.Instance.ChangeState(GameManager.GameState.Livestream);
                 }
+                _timer = 0f;
             }
-            else
+        }
+        else
+        {
+            if (_timer >= loopBubbleDuration)
             {
-                SetPopUpText(false, Random.Range(0, dialogsData.LoopingDialogs.Length));
-                haveDialogReady = true;
+                int tempExpression = (int)(Mathf.Clamp01(sanity.Value * -1 + 1) * 6);
+
+                switch (tempExpression)
+                {
+                    case 0:
+                        SetPopUpText(dialogsData.GoodDialogs[Random.Range(0, dialogsData.GoodDialogs.Length)]);
+                        break;
+                    case 1:
+                    case 2:
+                    case 3:
+                        SetPopUpText(dialogsData.NeutralDialogs[Random.Range(0, dialogsData.NeutralDialogs.Length)]);
+                        break;
+                    case 4:
+                    case 5:
+                        SetPopUpText(dialogsData.BadDialogs[Random.Range(0, dialogsData.BadDialogs.Length)]);
+                        break;
+                    case 6:
+                        break;
+                    default:
+                        break;
+                }
+                _timer = 0f;
             }
-            _timer= 0f;
         }
     }
 
     private void TextAnimation()
     {
         _timer += Time.deltaTime;
-        if (_timer >= 1 / textFrequency && currentLetterIndex < _popUpText.Length)
+        if (_timer >= 1 / wordFrequency && currentLetterIndex < _popUpText.Length)
         {
             currentLetterIndex++;
             bubbleText.text = _popUpText.Substring(0, currentLetterIndex);
             if (currentLetterIndex >= _popUpText.Length)
             {
                 currentLetterIndex = _popUpText.Length - 1;
-                haveDialogReady = false;
+                doingAnimation = false;
             }
             _timer = 0f;
         }
+        LayoutRebuilder.ForceRebuildLayoutImmediate(bubbleText.rectTransform);
     }
 }

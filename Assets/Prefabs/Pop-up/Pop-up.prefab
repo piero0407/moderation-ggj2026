@@ -419,5 +419,7 @@ MonoBehaviour:
   dialogsData: {fileID: 11400000, guid: 751ccf5b3fe3d7943855c38b83ebe6cc, type: 2}
   popUpText: 
   bubbleText: {fileID: 7035123539095568452}
-  textFrequency: 30
-  textTimer: 0
+  wordFrequency: 30
+  loopBubbleDuration: 5
+  introBubbleDuration: 3
+  sanity: {fileID: 11400000, guid: 4e9bdc9b4cda7944c8a9fe26f5a6c545, type: 2}

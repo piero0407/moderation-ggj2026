@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour
     {
         CurrentState = GameState.Intro;
         timeMultiplier = 1.0f;
+        
     }
 
     public void ChangeState(GameState newState)

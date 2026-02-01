@@ -13,8 +13,73 @@ MonoBehaviour:
   m_Name: DialogsData
   m_EditorClassIdentifier: RMC.MyProject.Runtime::DialogsData
   startingDialogs:
-  - 'Hi hi! Soy Ian Nox. '
+  - Hola chat! Soy Ian Nox.\nBienvenidos al stream
   - Hoy vengo a ustedes desde\nun lugar diferente al usual
   - No habra gameplay hoy, solo\nconversaremos.
-  loopingDialogs:
-  - 
+  goodDialogs:
+  - "Hahaha siempre me hacen re\xEDr."
+  - "He estado dibujando mucho\\n\xFAltimamente, se viene stream de dibujos. \u25DD(\u1D54\u15DC\u1D54)\u25DC"
+  - "Esta bien esta bien, voy a\\ntomar ag\xFCita. (\u0E51\u1D54\u2919\u1D54\u0E51)"
+  - Wow gracias chat por el apoyo!!!
+  - Me alegra haber prendido\nstream hoy.
+  - Hoy ordene mi cuarto, jeje
+  - Creo que empezare a hace\ncosplay, se les cumplio gente
+  - Que buenas vibes chat, gracias
+  - Saludos gente, los leo los leo
+  - Awww yo tambien los quiero mucho
+  - Ustedes sostienen el stream, que lindo leerlos
+  - Gracias me subieron el animo
+  - Jajaja me hacen reir
+  - Estoy trabajando en mejor\ncontenido, gracias
+  - "Yeee quiero hacer streams\\ntem\xE1ticos"
+  - Subire mas fotos y videos
+  - "Ojala pudiera hacer streams\\nirl en la calle\u2026"
+  - Si me gustaria salir mas e\nir a eventos
+  - Invitenme a eventos porfavor
+  - Necesito aire fresco
+  - Me gustaria salir mas pero\nestoy algo complicado
+  neutralDialogs:
+  - "Hola chat hoy empezamos\\nun poco tarde, disculpen \u0AEE\u25DE \u2038 \u25DF
+    \u10D0"
+  - "Despu\xE9s de mucho tiempo\\nno hacemos irl."
+  - Holaaa, bienvenidos los nuevos.
+  - "Hey bienvenido, despu\xE9s\\nde tanto tiempo."
+  - "\xBFC\xF3mo est\xE1n?, espero todo bien."
+  - "Bueno chat, \xBFqu\xE9 jugamos\\nel d\xEDa de hoy?"
+  - Hoy tenemos comenta mega variada.
+  - "\xBFVamos a reaccionar a\\nalgunos videos? \xBFQu\xE9 les parece?"
+  - Chat esto esta buenisimo
+  - Bienvenidos gracias por\ncaer, ponganse comodos
+  - Hey! Gracias por el follow
+  - Soy Iam Nox. Bienvenidos\nal stream
+  - Bienvenido, obvio si me\nacuerdo de ti
+  - "Gracias chat, veo que est\xE1n\\nlos m\xE1s fieles"
+  - "Despu\xE9s de tiempo tenemos\\nstream"
+  - Los estoy leyendo
+  - Que lindo ver el chat activo
+  - Estamos tranquilos hoy
+  - Hoy les tengo anecdota,\nesta divertida
+  badDialogs:
+  - La verdad he estado pensando\nen dejar de hacer stream por un tiempo.
+  - No me he sentido nada bien\npara ser sincero.
+  - "Por esos comentarios pierdo\\nfe en la humanidad\u2026"
+  - Todos somos bastante\nreemplazables.
+  - "Ugh\u2026"
+  - "No recuerdo la \xFAltima vez\\nque sal\xED de mi cuarto."
+  - No tengo muchas ganas\nde hacer nada.
+  - Que gran dia para no existir
+  - Odio todo esto
+  - "Ya no aguanto m\xE1s, voy\\na apagar creo\u2026"
+  - "Solo quer\xEDa relajarme,\\ncreo que tampoco eso se va a poder"
+  - Ya no se porque sigo\nintentando
+  - "Yo tampoco confiar\xEDa en m\xED"
+  - "Tienen raz\xF3n\u2026 esto es\\ndemasiado aburrido"
+  - Estoy demasiado cansado
+  - "Gracias yo tambi\xE9n me odio"
+  - "Yo no ped\xED esto, saben\u2026"
+  - Si tanto me odian, vengan\na mi casa y diganmelo en la cara
+  - Doxeenme no me importa
+  - Nadie escucha, dicen que\nte escuchan pero en realidad nadie lo hace
+  - Tal vez si sea mi culpa
+  - "En parte no s\xE9, creo que\\nme merezco lo que me pasa."
+  - Ehh no se si me dejen\nhacer eso, estoy algo complicado

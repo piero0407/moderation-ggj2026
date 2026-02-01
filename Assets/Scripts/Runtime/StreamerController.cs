@@ -144,7 +144,7 @@ public class StreamerController : MonoBehaviour
             }
             else
             {
-                gruntTimer = UnityEngine.Random.Range(10.0f, 15.0f);
+                gruntTimer = Random.Range(10.0f, 15.0f);
 
                 if (currentExpressionIndex < orderedEmotions.Length)
                 {
