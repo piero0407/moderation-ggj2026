@@ -1,6 +1,7 @@
 using System.Collections;
 using Scriptable_Objects_Architecture.Runtime.Variables;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour
 {
@@ -21,19 +22,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float naturalSanityDecrese = 0.001f;
 
     [SerializeField] private AudioSource[] audioAmbience;
+    [SerializeField] private AudioSource clickSource;
+    [SerializeField] private AudioClip clickClip;
     private int currentSource = -1;
 
     private void Awake()
     {
         if (Instance != null && Instance != this) Destroy(this);
         else Instance = this;
-
-        for (int i = 0; i < audioAmbience.Length; i++)
-        {
-            audioAmbience[i].volume = 0.0f;
-        }
-
-        ChangeAmbiance(0);
     }
     public enum GameState
     {
@@ -52,7 +48,17 @@ public class GameManager : MonoBehaviour
     {
         CurrentState = GameState.Intro;
         timeMultiplier = 1.0f;
+<<<<<<< HEAD
         
+=======
+
+        for (int i = 0; i < audioAmbience.Length; i++)
+        {
+            audioAmbience[i].volume = 0.0f;
+        }
+
+        ChangeAmbiance(0);
+>>>>>>> ea0b2350b37b98409aa532980eb80c70c719785a
     }
 
     public void ChangeState(GameState newState)
@@ -93,7 +99,17 @@ public class GameManager : MonoBehaviour
                 break;
         }
 
-
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                if (clickSource && clickClip)
+                {
+                    clickSource.pitch = Random.Range(0.8f, 1.2f);
+                    clickSource.PlayOneShot(clickClip);
+                }
+            }
+        }
     }
 
     public void IncreaseComplexity()
@@ -112,38 +128,31 @@ public class GameManager : MonoBehaviour
         if (which > audioAmbience.Length - 1) return;
         if (currentSource >= 0)
         {
-            IEnumerator fadeSound1 = FadeOut(audioAmbience[currentSource], 0.5f);
-            StartCoroutine(fadeSound1);
+            StartCoroutine(FadeOutCore(audioAmbience[currentSource], 0.5f));
         }
-        IEnumerator fadeSound2 = FadeIn(audioAmbience[which], 0.5f);
-        StartCoroutine(fadeSound2);
+        StartCoroutine(FadeInCore(audioAmbience[which], 0.5f));
         currentSource = which;
     }
 
-    public static IEnumerator FadeIn(AudioSource audioSource, float FadeTime)
+    private IEnumerator FadeOutCore(AudioSource src, float FadeTime)
     {
-        float startVolume = audioSource.volume;
-
-        while (audioSource.volume < 1.0f)
+        float startVolume = src.volume;
+        while (src.volume > 0f)
         {
-            audioSource.volume += startVolume * Time.deltaTime / FadeTime;
+            src.volume -= startVolume * Time.deltaTime / FadeTime;
             yield return null;
         }
-
-        audioSource.volume = startVolume;
+        src.volume = 0f;
     }
 
-    public static IEnumerator FadeOut(AudioSource audioSource, float FadeTime)
+    private IEnumerator FadeInCore(AudioSource src, float FadeTime)
     {
-        float startVolume = audioSource.volume;
-
-        while (audioSource.volume > 0)
+        while (src.volume < 1f)
         {
-            audioSource.volume -= startVolume * Time.deltaTime / FadeTime;
+            src.volume += Time.deltaTime / FadeTime;
             yield return null;
         }
-
-        audioSource.Stop();
-        audioSource.volume = startVolume;
+        src.volume = 1f;
     }
+
 }
