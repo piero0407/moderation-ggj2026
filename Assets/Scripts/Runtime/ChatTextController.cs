@@ -29,12 +29,12 @@ public class ChatTextController : MonoBehaviour
 
         if (chatBoxType == ChatBoxType.FWords)
         {
-            sanity.Value += 0.8f;
+            sanity.Value += 0.08f;
             sanity.Value = Mathf.Clamp01(sanity.Value);
         }
         else
         {
-            sanity.Value -= 0.8f;
+            sanity.Value -= 0.08f;
             sanity.Value = Mathf.Clamp01(sanity.Value);
         }
 
