@@ -416,7 +416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 536eef36eba2bd34fb4c64e1a5494431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: RMC.MyProject.Runtime::PopUpController
-  dialogsData: {fileID: 0}
+  dialogsData: {fileID: 11400000, guid: 751ccf5b3fe3d7943855c38b83ebe6cc, type: 2}
   popUpText: 
   bubbleText: {fileID: 7035123539095568452}
   textFrequency: 30

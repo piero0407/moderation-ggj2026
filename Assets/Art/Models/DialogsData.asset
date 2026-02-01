@@ -16,4 +16,5 @@ MonoBehaviour:
   - 'Hi hi! Soy Ian Nox. '
   - Hoy vengo a ustedes desde\nun lugar diferente al usual
   - No habra gameplay hoy, solo\nconversaremos.
-  loopingDialogs: []
+  loopingDialogs:
+  - 

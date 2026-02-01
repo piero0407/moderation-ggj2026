@@ -1,6 +1,5 @@
 using UnityEngine;
 using TMPro;
-using System;
 
 public class PopUpController : MonoBehaviour
 {
@@ -12,6 +11,7 @@ public class PopUpController : MonoBehaviour
     [SerializeField] private float textTimer = 0f;
 
     private bool haveDialogReady = false;
+    private int introDialog = 0;
 
     int currentLetterIndex = 0;
 
@@ -22,7 +22,6 @@ public class PopUpController : MonoBehaviour
 
     void Start()
     {
-        SetPopUpText(true, 0);
     }
 
     public void SetPopUpText(bool isStartingDialog, int dialogIndex)
@@ -42,14 +41,37 @@ public class PopUpController : MonoBehaviour
     }
     void Update()
     {
-        if(haveDialogReady)
-            TextAnimation();
-        else
-            GetNewTextIfNeeded();
+        switch (GameManager.Instance.CurrentState)
+        {
+            case GameManager.GameState.Start:
+            case GameManager.GameState.Evidence:
+            case GameManager.GameState.Notepad:
+            case GameManager.GameState.LivestreamMax:
+            case GameManager.GameState.None:
+            case GameManager.GameState.Livestream:
+            if(haveDialogReady)
+                TextAnimation();
+            else
+                GetNewTextIfNeeded();
+                break;
+            default:
+                break;
+        }
     }
 
     private void GetNewTextIfNeeded()
     {
+        if(introDialog < dialogsData.StartingDialogs.Length)
+        {
+            SetPopUpText(true, introDialog);
+            haveDialogReady = true;
+            introDialog++;
+        }
+        else
+        {
+            SetPopUpText(false, Random.Range(0, dialogsData.LoopingDialogs.Length));
+            haveDialogReady = true;
+        }
     }
 
     private void TextAnimation()

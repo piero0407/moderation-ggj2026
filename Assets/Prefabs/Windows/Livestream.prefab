@@ -439,7 +439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 225fa52f61ffc7849bc4e227103b52bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: RMC.MyProject.Runtime::WindowStateData
-  windowState: 1
+  windowState: 2
 --- !u!1 &2226845553991080244
 GameObject:
   m_ObjectHideFlags: 0
