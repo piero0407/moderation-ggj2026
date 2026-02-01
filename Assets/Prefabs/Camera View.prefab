@@ -155,7 +155,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: af3b2c6c0bbbd634f923f759babb0e59, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 21871365ec542824fb9b6312b8f8cb2d, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -433,7 +433,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5b20508035b3fd24fb4f17d8d2d14af9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 97f4443c1495b2a43979ec81396bfbbd, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -475,6 +475,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 76
       objectReference: {fileID: 0}
+    - target: {fileID: 6467763005892831063, guid: 2e39f95aad9bcc84d83f77f2adf22cba, type: 3}
+      propertyPath: dialogsData
+      value: 
+      objectReference: {fileID: 11400000, guid: 751ccf5b3fe3d7943855c38b83ebe6cc, type: 2}
     - target: {fileID: 8426127420407705096, guid: 2e39f95aad9bcc84d83f77f2adf22cba, type: 3}
       propertyPath: m_Name
       value: Pop-up
