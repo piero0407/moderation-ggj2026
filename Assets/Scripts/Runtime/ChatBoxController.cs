@@ -27,22 +27,22 @@ public class ChatBoxController : MonoBehaviour
 
     void Update()
     {
-        GameManager.GameState state = GameManager.Instance.CurrentState;
-        switch (state)
+        switch (GameManager.Instance.CurrentState)
         {
             case GameManager.GameState.Evidence:
             case GameManager.GameState.Notepad:
             case GameManager.GameState.LivestreamMax:
+            case GameManager.GameState.None:
                 if (!cannotDoTask.activeSelf) cannotDoTask.SetActive(true);
+                SpawnChatText();
                 break;
             case GameManager.GameState.Livestream:
                 if (cannotDoTask.activeSelf) cannotDoTask.SetActive(false);
+                SpawnChatText();
                 break;
             default:
                 break;
         }
-
-        if (state != GameManager.GameState.Start && state != GameManager.GameState.Paused) SpawnChatText();
     }
 
     private void SpawnChatText()

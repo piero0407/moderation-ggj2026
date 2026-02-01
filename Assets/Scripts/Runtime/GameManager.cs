@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
 }
     public enum GameState
     {
+        Intro,
         Start,
         Livestream,
         LivestreamMax,
@@ -46,17 +47,33 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        CurrentState = GameState.Start;
+        CurrentState = GameState.Intro;
         timeMultiplier = 1.0f;
     }
 
     public void ChangeState(GameState newState)
     {
-        CurrentState = newState;
+        switch (CurrentState)
+        {
+            case GameState.Intro:
+                if (newState == GameState.Livestream)
+                    CurrentState = GameState.Start;
+                break;
+            case GameState.Evidence:
+            case GameState.Notepad:
+            case GameState.Livestream:
+            case GameState.LivestreamMax:
+            case GameState.None:
+                CurrentState = newState;
+                break;
+            default:
+                CurrentState = newState;
+                break;
+        }
     }
 
     void Update()
-    {
+    { 
         switch (CurrentState)
         {
             case GameState.Evidence:
