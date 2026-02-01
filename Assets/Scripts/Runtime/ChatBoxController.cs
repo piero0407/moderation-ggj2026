@@ -76,7 +76,7 @@ public class ChatBoxController : MonoBehaviour
 
             if (range <= badChatpercent || range <= spamChatpercent)
             {
-                ChatTextController chatTextController = Instantiate(range >= spamChatpercent ? spamChatTextPrefab : badChatTextPrefab, content.transform).GetComponent<ChatTextController>();
+                ChatTextController chatTextController = Instantiate(range >= spamChatpercent ? badChatTextPrefab : spamChatTextPrefab, content.transform).GetComponent<ChatTextController>();
                 if (range >= spamChatpercent)
                 {
                     chatTextController.SetChatText(

@@ -307,7 +307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   chatText: {fileID: 7751235456269868871}
-  chatBoxType: 1
+  chatBoxType: 2
   sanity: {fileID: 11400000, guid: 4e9bdc9b4cda7944c8a9fe26f5a6c545, type: 2}
 --- !u!114 &3772190804705180241
 MonoBehaviour:
