@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b2f0b088d40fefa2812e0a924aab917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: RMC.MyProject.Runtime::FileGenerator
-  iconCanvas: {fileID: 3184712490024183867}
+  iconCanvas: {fileID: 3482123491337168088}
   itemDescription: {fileID: 6481350324524351772}
 --- !u!1 &4225972220236851871
 GameObject:
