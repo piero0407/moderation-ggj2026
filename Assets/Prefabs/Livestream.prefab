@@ -221,6 +221,7 @@ GameObject:
   - component: {fileID: 1688834696895201841}
   - component: {fileID: 5622584143894219309}
   - component: {fileID: 3906391089888993633}
+  - component: {fileID: 6091455514630138975}
   m_Layer: 0
   m_Name: Livestream
   m_TagString: Untagged
@@ -285,6 +286,19 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+--- !u!114 &6091455514630138975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069853712814110273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 225fa52f61ffc7849bc4e227103b52bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: RMC.MyProject.Runtime::WindowStateData
+  windowState: 1
 --- !u!1 &3207604543068577147
 GameObject:
   m_ObjectHideFlags: 0
