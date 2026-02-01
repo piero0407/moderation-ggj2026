@@ -30,12 +30,12 @@ public class ChatTextController : MonoBehaviour
         if (chatBoxType == ChatBoxType.FWords)
         {
             Debug.Log("Banned bad chat message");
-            sanity.Value += 0.8f;
+            sanity.Value += 0.08f;
         }
         else
         {
             Debug.Log("Banned normal chat message");
-            sanity.Value -= 0.8f;
+            sanity.Value -= 0.08f;
         }
 
         chatText.text = chatBoxType != ChatBoxType.Normal ? "<i>This message has been removed.</i>" : "<i>This message has been wrongfully removed.</i>";

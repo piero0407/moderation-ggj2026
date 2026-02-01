@@ -42,7 +42,7 @@ public class EventController : MonoBehaviour
             if (gm.eventTime)
             {
                 gameStatus.text += $"\nComplete your task.";
-                taskLabel.text += $" | Task progress: {gm.taskCompletion * 100f}%";
+                taskLabel.text += $" | Task progress: {Math.Round(gm.taskCompletion * 100f)}%";
             }
         }
     }
