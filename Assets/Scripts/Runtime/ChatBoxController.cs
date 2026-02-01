@@ -12,60 +12,59 @@ public class ChatBoxController : MonoBehaviour
 
     [Header("Variables")]
     [SerializeField] private Vector2 randomTimer = new Vector2(.5f, 3f);
+    [SerializeField] const int maxChatMessages = 12;
     private float _timer;
     private float _currentTime;
-    private bool cannotTask;
 
     void Start()
     {
         _timer = Random.Range(randomTimer.x, randomTimer.y);
-        cannotTask = false;
     }
 
     void Update()
     {
-        _currentTime += Time.deltaTime;
-        if (_currentTime >= _timer)
+        switch(GameManager.Instance.CurrentState)
         {
-            SpawnChatText();
-            _currentTime = 0;
-            _timer = Random.Range(randomTimer.x, randomTimer.y);
-        }
+            case GameManager.GameState.Evidence:
+            case GameManager.GameState.Notepad:
+            
+                if (!cannotDoTask.activeSelf) cannotDoTask.SetActive(true);
+                SpawnChatText();
+                break;
 
-        if (!cannotTask && cannotDoTask.activeSelf) cannotDoTask.SetActive(false);
-        else if (cannotTask && !cannotDoTask.activeSelf) cannotDoTask.SetActive(true);
+            case GameManager.GameState.Livestream:
+            case GameManager.GameState.LivestreamMax:
+
+                if (cannotDoTask.activeSelf) cannotDoTask.SetActive(false);
+                SpawnChatText();
+                break;
+
+            default:
+                break;
+        }
     }
 
     private void SpawnChatText()
     {
-        ChatTextController chatTextController = Instantiate(chatTextPrefab, content.transform).GetComponent<ChatTextController>();
-        chatTextController.SetChatText(
-            chatTextData.Users[Random.Range(0, chatTextData.Users.Length)],
-            chatTextData.ChatLines[Random.Range(0, chatTextData.ChatLines.Length)]
-        );
-
-        if (content.transform.childCount > 12)
+        _currentTime += Time.deltaTime;
+        if (_currentTime >= _timer)
         {
-            RemoveChat();
-        }
-    }
+            // Reset timer to a random value
+            _currentTime = 0;
+            _timer = Random.Range(randomTimer.x, randomTimer.y);
 
-    private void RemoveChat()
-    {
-        if (!cannotTask) return;
-        Destroy(content.transform.GetChild(0).gameObject);
-    }
+            // Instantiate chat text
+            ChatTextController chatTextController = Instantiate(chatTextPrefab, content.transform).GetComponent<ChatTextController>();
+            chatTextController.SetChatText(
+                chatTextData.Users[Random.Range(0, chatTextData.Users.Length)],
+                chatTextData.ChatLines[Random.Range(0, chatTextData.ChatLines.Length)]
+            );
 
-    public void DisableTaskAction(bool revert = false)
-    {
-        if (revert)
-        {
-            cannotTask = false;
-            cannotDoTask.SetActive(false);
-        } else
-        {
-            cannotTask = true;
-            cannotDoTask.SetActive(true);
+            // Limit chat messages to 12
+            if (content.transform.childCount > maxChatMessages)
+            {
+                Destroy(content.transform.GetChild(0).gameObject);
+            }
         }
     }
 }

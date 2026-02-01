@@ -8,6 +8,7 @@ public class MinimizeWindow : MonoBehaviour
     {
         if (windowToToggle != null)
         {
+            windowToToggle.transform.SetAsFirstSibling();
             windowToToggle.SetActive(false);
         }
         else

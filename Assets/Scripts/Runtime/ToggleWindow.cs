@@ -1,51 +1,51 @@
-using System.Linq;
 using UnityEngine;
 
 public class ToggleWindow : MonoBehaviour
 {
     [SerializeField] private GameObject[] availableWindows;
-    private int lastWhich = 1;
+    [SerializeField] private GameManager.GameState[] stateWindows;
+    
+    Transform parentTransform;
 
-    public void ToggleWindowVisibility(int which)
+    void Start()
     {
-        if (which != 0)
+        parentTransform = availableWindows[0].transform.parent;
+    }
+
+    public void ToggleWindowVisibility(int id)
+    {
+        if (!availableWindows[id].activeSelf)
         {
-            GameObject obj = availableWindows[which - 1];
-            RectTransform transform = obj.GetComponent<RectTransform>();
-
-            if (!obj.activeSelf)
-            {
-                obj.SetActive(true);
-                transform.SetAsLastSibling();
-                if (obj.name == "Livestream") obj.BroadcastMessage("DisableTaskAction", true); 
-            }
-            else
-            {
-                if (lastWhich == which)
-                {
-                    obj.SetActive(false);
-                    transform.SetAsFirstSibling();
-                    if (obj.name == "Livestream") obj.BroadcastMessage("DisableTaskAction", false); 
-                } else
-                {
-                    if (transform.GetSiblingIndex() != availableWindows.Length - 1)
-                    {
-                        transform.SetAsLastSibling();
-                        if (obj.name == "Livestream") obj.BroadcastMessage("DisableTaskAction", true); 
-                    } else
-                    {
-                        obj.SetActive(false);
-                        transform.SetAsFirstSibling();
-                        if (obj.name == "Livestream") obj.BroadcastMessage("DisableTaskAction", false); 
-                    }
-                }
-            }
-
-            lastWhich = which;
+            availableWindows[id].SetActive(true);
+            availableWindows[id].transform.SetAsLastSibling();
         }
         else
         {
-            Debug.LogWarning("Window to toggle is not assigned.");
+            if (availableWindows[id].transform.GetSiblingIndex() == availableWindows.Length - 1)
+            {
+                availableWindows[id].transform.SetAsFirstSibling();
+                availableWindows[id].SetActive(false);
+            }
+            else
+            {
+                availableWindows[id].transform.SetAsLastSibling();
+            }
+        }
+
+        for (int i = 0; i < availableWindows.Length; i++)
+        {
+            if (availableWindows[i].transform == parentTransform.GetChild(availableWindows.Length - 1))
+            {
+                if (availableWindows[i].activeSelf)
+                {
+                    GameManager.Instance.ChangeState(stateWindows[i]);
+                }
+                else
+                {
+                    GameManager.Instance.ChangeState(GameManager.GameState.None);
+                }
+                break;
+            }
         }
     }
 }

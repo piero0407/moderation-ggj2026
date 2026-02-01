@@ -808,7 +808,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3136478535dee84289a6e089745c765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: RMC.MyProject.Runtime::MinimizeWindow
-  windowToToggle: {fileID: 0}
+  windowToToggle: {fileID: 2069853712814110273}
 --- !u!1 &7323472917684858173
 GameObject:
   m_ObjectHideFlags: 0
@@ -1230,11 +1230,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2277213877178737592, guid: eee3593c581666941a2ce54da5bb5cbb, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 120
+      value: 225
       objectReference: {fileID: 0}
     - target: {fileID: 2277213877178737592, guid: eee3593c581666941a2ce54da5bb5cbb, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -50
+      value: -150
       objectReference: {fileID: 0}
     - target: {fileID: 2277213877178737592, guid: eee3593c581666941a2ce54da5bb5cbb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

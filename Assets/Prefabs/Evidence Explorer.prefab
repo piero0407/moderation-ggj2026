@@ -630,7 +630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3136478535dee84289a6e089745c765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: RMC.MyProject.Runtime::MinimizeWindow
-  windowToToggle: {fileID: 0}
+  windowToToggle: {fileID: 5737958945752649803}
 --- !u!1 &3529739573206213725
 GameObject:
   m_ObjectHideFlags: 0
@@ -1228,10 +1228,6 @@ PrefabInstance:
     - target: {fileID: 4267268881957306144, guid: 658666aeed1151175bbc0f0b7166f93a, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4267268881957306144, guid: 658666aeed1151175bbc0f0b7166f93a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -5400.0005
       objectReference: {fileID: 0}
     - target: {fileID: 4267268881957306144, guid: 658666aeed1151175bbc0f0b7166f93a, type: 3}
       propertyPath: m_LocalRotation.w
