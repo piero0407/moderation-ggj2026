@@ -943,6 +943,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8a84384778a0ee61b6ac74a46e02b20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: RMC.MyProject.Runtime::EvidenceController
+  fileTemplate: {fileID: 4140974434475974146, guid: 658666aeed1151175bbc0f0b7166f93a, type: 3}
+  hierarchyMaster: {fileID: 7405726707486747561}
+  fileTypes:
+  - {fileID: 21300000, guid: 982ad365524de0b54add73de7fe60ea9, type: 3}
+  - {fileID: 21300000, guid: b69f6ff78bbaddc09882bf779da25b47, type: 3}
+  - {fileID: 21300000, guid: 019a1de7af7c14258a9633167b49dfe4, type: 3}
 --- !u!1 &7154595842066609455
 GameObject:
   m_ObjectHideFlags: 0

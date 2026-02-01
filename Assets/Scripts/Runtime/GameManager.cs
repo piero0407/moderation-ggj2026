@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AudioClip clickClip;
     private int currentSource = -1;
 
-    private EvidenceController evidenceCatcher;
+    [SerializeField] private EvidenceController evidenceCatcher;
     private bool policeAvailable = false;
 
     private void Awake()

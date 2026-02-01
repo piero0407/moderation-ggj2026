@@ -508,7 +508,14 @@ MonoBehaviour:
   cannotDoTask: {fileID: 3609385602288258751}
   chatTextData: {fileID: 11400000, guid: 0bbf966efcce1034f8ec86686c4883d6, type: 2}
   badChatTextData: {fileID: 11400000, guid: 773cfbde8cbdc954eba3669ae6dc6028, type: 2}
+  spamChatTextData: {fileID: 11400000, guid: d161687a690c03081850b57bac85c248, type: 2}
+  evidenceChatTextData: {fileID: 11400000, guid: e9e129379157e833dafdc8df29d015c0, type: 2}
   chatTextPrefab: {fileID: 8673003716169582352, guid: df91465121c744c538eb68f1b3158e98, type: 3}
   badChatTextPrefab: {fileID: 8673003716169582352, guid: d80b6b9dd9d14b649bfb7d3d7027cab7, type: 3}
+  spamChatTextPrefab: {fileID: 8673003716169582352, guid: 19dc92a154a961943b6f7544928c1f5e, type: 3}
+  evidenceChatTextPrefab: {fileID: 8673003716169582352, guid: dc2e741e18774fcfaabef43b34d10c27, type: 3}
   randomTimer: {x: 0.5, y: 2}
   badChatpercent: 0.2
+  spamChatpercent: 0.25
+  evidenceChatpercent: 0.9
+  maxChatMessages: 20

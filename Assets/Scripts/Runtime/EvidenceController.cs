@@ -24,7 +24,7 @@ public class EvidenceController : MonoBehaviour
         GameObject.Instantiate(fileTemplate, hierarchyMaster.transform);
         FileGenerator gen = fileTemplate.GetComponent<FileGenerator>();
 
-        gen.RefreshIcon(fileTypes[type], name, asertionColor);
+        gen.RefreshIcon(fileTypes[type != 911 ? type : 2], name, asertionColor);
 
         if (type == 911)
         {

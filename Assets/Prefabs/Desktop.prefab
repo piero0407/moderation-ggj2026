@@ -60,8 +60,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   timeSinceBegin: 0
   eventTime: 0
+  moderatorPerms: 1
   eventCooldown: 10
   taskCompletion: 0
+  winScreen: {fileID: 5023027459136665144}
+  loseScreen: {fileID: 3860399578526735931}
   sanity: {fileID: 11400000, guid: 4e9bdc9b4cda7944c8a9fe26f5a6c545, type: 2}
   naturalSanityDecrese: 0.02
   audioAmbience:
@@ -73,6 +76,7 @@ MonoBehaviour:
   - {fileID: 736263981494794457}
   clickSource: {fileID: 907559139240972755}
   clickClip: {fileID: 8300000, guid: b86fa4d85217dac4685c0c471952d584, type: 3}
+  evidenceCatcher: {fileID: 3463615671742775555}
 --- !u!82 &907559139240972755
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1217,6 +1221,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2186583786597043994, guid: cbe28d53fc104ac42bdaf416c5ae1dc5, type: 3}
   m_PrefabInstance: {fileID: 1036369410968932487}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3860399578526735931 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4319805863453068988, guid: cbe28d53fc104ac42bdaf416c5ae1dc5, type: 3}
+  m_PrefabInstance: {fileID: 1036369410968932487}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1863122668292481631
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1317,6 +1326,11 @@ PrefabInstance:
 --- !u!224 &2600347870015418649 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4453337301690045254, guid: d8398a8bd9eccbb4bb8c28491eeb4808, type: 3}
+  m_PrefabInstance: {fileID: 1863122668292481631}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5023027459136665144 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6660336689905570919, guid: d8398a8bd9eccbb4bb8c28491eeb4808, type: 3}
   m_PrefabInstance: {fileID: 1863122668292481631}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1969189381683208404
@@ -1476,6 +1490,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 522688ca37db236ae827eb82ef0531bd, type: 3}
+--- !u!114 &3463615671742775555 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3117277458261778903, guid: 522688ca37db236ae827eb82ef0531bd, type: 3}
+  m_PrefabInstance: {fileID: 1969189381683208404}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a84384778a0ee61b6ac74a46e02b20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: RMC.MyProject.Runtime::EvidenceController
 --- !u!114 &5587831153211035521 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6257753448514826069, guid: 522688ca37db236ae827eb82ef0531bd, type: 3}
@@ -1900,7 +1925,7 @@ PrefabInstance:
     - target: {fileID: 7354278296576976495, guid: 9077bfa62141cd2439c6819ae33b5729, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: eb405eba68aa4d14ab40320b58c20406, type: 3}
+      objectReference: {fileID: 21300000, guid: 97f4443c1495b2a43979ec81396bfbbd, type: 3}
     - target: {fileID: 8438265783344551828, guid: 9077bfa62141cd2439c6819ae33b5729, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
