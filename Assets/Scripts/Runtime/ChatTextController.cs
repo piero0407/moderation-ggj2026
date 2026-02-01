@@ -30,15 +30,21 @@ public class ChatTextController : MonoBehaviour
         if (chatBoxType == ChatBoxType.FWords)
         {
             Debug.Log("Banned bad chat message");
-            sanity.Value += 0.1f;
+            sanity.Value += 0.8f;
         }
         else
         {
             Debug.Log("Banned normal chat message");
-            sanity.Value -= 0.1f;
+            sanity.Value -= 0.8f;
         }
 
-        chatText.text = "<i>This message has been removed.</i>";
-        chatText.color = chatBoxType != ChatBoxType.Normal ? Color.lightGreen : Color.gray;
+        chatText.text = chatBoxType != ChatBoxType.Normal ? "<i>This message has been removed.</i>" : "<i>This message has been wrongfully removed.</i>";
+        chatText.color = chatBoxType != ChatBoxType.Normal ? Color.gray : Color.darkRed;
+
+        if (chatBoxType != ChatBoxType.Normal && GameManager.Instance.eventTime)
+        {
+            GameManager.Instance.taskCompletion += 0.05f;
+            if (GameManager.Instance.taskCompletion >= 1.0f) GameManager.Instance.IncreaseComplexity();
+        }
     }
 }

@@ -6,32 +6,44 @@ using UnityEngine;
 
 public class EventController : MonoBehaviour
 {
-    [SerializeField] private float eventCooldown = 8.0f;
-    [SerializeField] private float taskProgress = 0.0f; // from 0 to 1
-    [SerializeField] private float timeSinceBegin = 0.0f;
-
     [SerializeField] private TMP_Text gameStatus;
     [SerializeField] private TMP_Text taskLabel;
-    public float timeMultiplier = 1.0f;
-    public bool eventTime { get; private set; } = false;
 
     void Update()
     {
-        timeSinceBegin += Time.deltaTime;
+        GameManager gm = GameManager.Instance;
 
-        if (eventCooldown >= 0.0f)
+        if (gm.CurrentState == GameManager.GameState.Paused || gm.CurrentState == GameManager.GameState.GameOver) return;
+
+        gm.timeSinceBegin += Time.deltaTime;
+
+        if (gm.eventCooldown > 0.0f)
         {
-            if (eventTime) eventTime = false;
-            eventCooldown -= Time.deltaTime * timeMultiplier;
+            if (gm.CurrentState != GameManager.GameState.Start) gm.eventCooldown -= Time.deltaTime * gm.timeMultiplier;
         }
         else
         {
-            eventCooldown = 8.0f;
-            Debug.Log("TIME FOR AN EVENT.");
-            eventTime = true;
+            if (!gm.eventTime)
+            {
+                Debug.Log("TIME FOR AN EVENT.");
+                gm.eventTime = true;
+            }
         }
 
-        TimeSpan t = TimeSpan.FromSeconds(timeSinceBegin);
-        gameStatus.text = $"Time multiplier: {timeMultiplier}x\nTime passed: {string.Format("{0:D2}:{1:D2}", t.Minutes, t.Seconds)}\nEvidence collected: {GameManager.Instance.evidenceCollected}";
+        TimeSpan t = TimeSpan.FromSeconds(GameManager.Instance.timeSinceBegin);
+        gameStatus.text = $"Time multiplier: {gm.timeMultiplier}x\nTime passed: {string.Format("{0:D2}:{1:D2}", t.Minutes, t.Seconds)}\nEvidence collected: {GameManager.Instance.evidenceCollected}";
+        taskLabel.text = $"Tasks done: {gm.tasksCompleted} | Total tasks recieved: {gm.totalTasks}";
+
+        if (gm.eventCooldown > 0.0f)
+        {
+            gameStatus.text += $"\nA new task will begin in {(int)Math.Round(gm.eventCooldown)} seconds.";
+        } else
+        {
+            if (gm.eventTime)
+            {
+                gameStatus.text += $"\nComplete your task.";
+                taskLabel.text += $" | Task progress: {gm.taskCompletion * 100f}%";
+            }
+        }
     }
 }

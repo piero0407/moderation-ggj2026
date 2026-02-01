@@ -416,8 +416,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd9019c5fda7ff4468b2fe7bf3f692c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  timeSinceBegin: 0
+  eventTime: 0
+  eventCooldown: 10
+  taskCompletion: 0
   sanity: {fileID: 11400000, guid: 4e9bdc9b4cda7944c8a9fe26f5a6c545, type: 2}
-  naturalSanityDecrese: 0.02
+  naturalSanityDecrese: 0.01
 --- !u!1 &3771400931369947381
 GameObject:
   m_ObjectHideFlags: 0
@@ -807,12 +811,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba486cb6ed4baf3bf9540bfad99aa6dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: RMC.MyProject.Runtime::EventController
-  eventCooldown: 8
-  taskProgress: 0
-  timeSinceBegin: 0
   gameStatus: {fileID: 3942037824250615220}
   taskLabel: {fileID: 4591012562231890443}
-  timeMultiplier: 1
 --- !u!1 &5599955598081623624
 GameObject:
   m_ObjectHideFlags: 0
@@ -1851,6 +1851,10 @@ PrefabInstance:
     - target: {fileID: 1688834696895201841, guid: 9077bfa62141cd2439c6819ae33b5729, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977230396030276942, guid: 9077bfa62141cd2439c6819ae33b5729, type: 3}
+      propertyPath: m_Value
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2069853712814110273, guid: 9077bfa62141cd2439c6819ae33b5729, type: 3}
       propertyPath: m_Name

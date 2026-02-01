@@ -1,3 +1,4 @@
+using System.Dynamic;
 using UnityEngine;
 
 public class ChatBoxController : MonoBehaviour
@@ -14,8 +15,8 @@ public class ChatBoxController : MonoBehaviour
 
     [Header("Variables")]
     [SerializeField] private Vector2 randomTimer = new Vector2(.5f, 3f);
-    [SerializeField, Range(0f, 1f)] private float badChatpercent = 0.2f;
-    [SerializeField] int maxChatMessages = 12;
+    [SerializeField, Range(0f, 1f)] private float badChatpercent = 0.4f;
+    [SerializeField] int maxChatMessages = 20;
     private float _timer;
     private float _currentTime;
 
@@ -51,6 +52,9 @@ public class ChatBoxController : MonoBehaviour
         {
             _currentTime = 0;
             _timer = Random.Range(randomTimer.x, randomTimer.y);
+
+            if (!GameManager.Instance.eventTime) badChatpercent = -1.0f;
+            else badChatpercent = 0.4f;
 
             if (Random.Range(0f, 1f) <= badChatpercent)
             {
