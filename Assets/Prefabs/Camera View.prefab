@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1281261218781479227}
   - component: {fileID: 1020671956679745366}
   - component: {fileID: 1129067944740239698}
+  - component: {fileID: 9065076952267787473}
   m_Layer: 0
   m_Name: StreamBackground
   m_TagString: Untagged
@@ -72,6 +73,23 @@ MonoBehaviour:
     y: 0
     width: 0.62
     height: 1
+--- !u!114 &9065076952267787473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115314979365350032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4c27a1ff978af6ec92b2a9f41240706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: RMC.MyProject.Runtime::GlowingLight
+  minBrightness: 0.5
+  maxBrightness: 1
+  pulseSpeed: 1
+  flickerSpeed: 8
+  flickerBias: 0.2
 --- !u!1 &3403709961316623072
 GameObject:
   m_ObjectHideFlags: 0

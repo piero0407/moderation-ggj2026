@@ -30,14 +30,12 @@ public class ChatBoxController : MonoBehaviour
         {
             case GameManager.GameState.Evidence:
             case GameManager.GameState.Notepad:
-            
+            case GameManager.GameState.LivestreamMax:
                 if (!cannotDoTask.activeSelf) cannotDoTask.SetActive(true);
                 SpawnChatText();
                 break;
 
             case GameManager.GameState.Livestream:
-            case GameManager.GameState.LivestreamMax:
-
                 if (cannotDoTask.activeSelf) cannotDoTask.SetActive(false);
                 SpawnChatText();
                 break;
@@ -52,7 +50,6 @@ public class ChatBoxController : MonoBehaviour
         _currentTime += Time.deltaTime;
         if (_currentTime >= _timer)
         {
-            // Reset timer to a random value
             _currentTime = 0;
             _timer = Random.Range(randomTimer.x, randomTimer.y);
 
@@ -75,7 +72,6 @@ public class ChatBoxController : MonoBehaviour
                 );
             }
 
-            // Limit chat messages to 12
             if (content.transform.childCount > maxChatMessages)
             {
                 Destroy(content.transform.GetChild(0).gameObject);
