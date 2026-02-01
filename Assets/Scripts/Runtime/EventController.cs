@@ -17,7 +17,7 @@ public class EventController : MonoBehaviour
 
         if (gm.eventCooldown > 0.0f)
         {
-            if (gm.CurrentState != GameManager.GameState.Start) gm.eventCooldown -= Time.deltaTime * gm.timeMultiplier;
+            if (gm.CurrentState != GameManager.GameState.Start && gm.CurrentState != GameManager.GameState.Intro) gm.eventCooldown -= Time.deltaTime * gm.timeMultiplier;
         }
         else
         {
