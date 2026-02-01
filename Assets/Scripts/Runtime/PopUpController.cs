@@ -8,7 +8,8 @@ public class PopUpController : MonoBehaviour
     string _popUpText;
     [SerializeField] private TextMeshProUGUI bubbleText;
     [SerializeField] private float textFrequency = 30f;
-    [SerializeField] private float textTimer = 0f;
+    [SerializeField] private float textTimer = 3f;
+    private float _timer = 0f;
 
     private bool haveDialogReady = false;
     private int introDialog = 0;
@@ -61,23 +62,32 @@ public class PopUpController : MonoBehaviour
 
     private void GetNewTextIfNeeded()
     {
-        if(introDialog < dialogsData.StartingDialogs.Length)
+        _timer += Time.deltaTime;
+        if (_timer < textTimer)
         {
-            SetPopUpText(true, introDialog);
-            haveDialogReady = true;
-            introDialog++;
-        }
-        else
-        {
-            SetPopUpText(false, Random.Range(0, dialogsData.LoopingDialogs.Length));
-            haveDialogReady = true;
+            if(introDialog < dialogsData.StartingDialogs.Length)
+            {
+                SetPopUpText(true, introDialog);
+                haveDialogReady = true;
+                introDialog++;
+                if(introDialog >= dialogsData.StartingDialogs.Length - 1)
+                {
+                    GameManager.Instance.ChangeState(GameManager.GameState.Livestream);
+                }
+            }
+            else
+            {
+                SetPopUpText(false, Random.Range(0, dialogsData.LoopingDialogs.Length));
+                haveDialogReady = true;
+            }
+            _timer= 0f;
         }
     }
 
     private void TextAnimation()
     {
-        textTimer += Time.deltaTime;
-        if (textTimer >= 1 / textFrequency && currentLetterIndex < _popUpText.Length)
+        _timer += Time.deltaTime;
+        if (_timer >= 1 / textFrequency && currentLetterIndex < _popUpText.Length)
         {
             currentLetterIndex++;
             bubbleText.text = _popUpText.Substring(0, currentLetterIndex);
@@ -86,7 +96,7 @@ public class PopUpController : MonoBehaviour
                 currentLetterIndex = _popUpText.Length - 1;
                 haveDialogReady = false;
             }
-            textTimer = 0f;
+            _timer = 0f;
         }
     }
 }
