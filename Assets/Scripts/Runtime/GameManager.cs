@@ -97,5 +97,6 @@ public class GameManager : MonoBehaviour
 
         totalTasks += 1;
         if (taskCompletion > 0.85f) tasksCompleted += 1;
+        taskCompletion = 0.0f;
     }
 }
