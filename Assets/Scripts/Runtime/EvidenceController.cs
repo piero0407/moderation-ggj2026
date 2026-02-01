@@ -15,6 +15,7 @@ public class EvidenceController : MonoBehaviour
     public void CallPolice()
     {
         GameManager.Instance.moderatorPerms = false;
+        GameManager.Instance.ChangeState(GameManager.GameState.Win);
     }
 
     public void createNewEvidence(String name, Color asertionColor, int type)
@@ -30,7 +31,6 @@ public class EvidenceController : MonoBehaviour
             if (policeButton != null)
             {
                 policeButton.onClick.AddListener(CallPolice);
-                GameManager.Instance.ChangeState(GameManager.GameState.Win);
             }
         }
 
