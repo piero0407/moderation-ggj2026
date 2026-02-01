@@ -65,7 +65,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Welcome to the <b>adventure</b>.\u200B"
+  m_text: "Congratulations! You managed to become the official moderator for your
+    favorite <b><i>itsyou.tv</i></b> streamer!\n\nNow, this task <i>is not</i> easy,
+    but do not fear! We are here to <i>help</i> you out. Your contributions will
+    improve the livestream for everyone who is watch<i>ing</i>, including <i>your
+    streamer</i> in charge.\n\nDue to this rank upgrade, you have the same benefits
+    and features as our <b>premium plan</b> members, such as hiding the chat, and
+    taking screenshots!\n\nPlease <i>keep an eye on</i> the chat menu. There are
+    different tasks that you have to accomplish during the livestream, to avoid any
+    <b><i>harmful incidents</i></b> and a <i>potential end of</i> stream.\n\nWe appreciate
+    your efforts and wish you the best.\n\n<b>itsyou.tv - Staff</b>\n<i>Your life.
+    Now on-line.</i>\n\n<b>For more information, read the non-disclosure agreement
+    attached with this email.</b>\u200B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2d226439165fa92eda7b2885b85d68cb, type: 2}
   m_sharedMaterial: {fileID: 3676104392036418150, guid: 2d226439165fa92eda7b2885b85d68cb, type: 2}
@@ -285,6 +296,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5411468796975227193}
+  - component: {fileID: 6014090421886822427}
   m_Layer: 0
   m_Name: Annotation Area
   m_TagString: Untagged
@@ -312,6 +324,36 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: -0.5}
   m_SizeDelta: {x: -10, y: -59}
   m_Pivot: {x: 1, y: 0.5}
+--- !u!114 &6014090421886822427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414903009167210289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.ScrollRect
+  m_Content: {fileID: 5345395006890024977}
+  m_Horizontal: 0
+  m_Vertical: 1
+  m_MovementType: 2
+  m_Elasticity: 0.1
+  m_Inertia: 1
+  m_DecelerationRate: 0.135
+  m_ScrollSensitivity: 1
+  m_Viewport: {fileID: 5411468796975227193}
+  m_HorizontalScrollbar: {fileID: 0}
+  m_VerticalScrollbar: {fileID: 0}
+  m_HorizontalScrollbarVisibility: 0
+  m_VerticalScrollbarVisibility: 0
+  m_HorizontalScrollbarSpacing: 0
+  m_VerticalScrollbarSpacing: 0
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1447429378576499816
 GameObject:
   m_ObjectHideFlags: 0
@@ -1335,7 +1377,38 @@ MonoBehaviour:
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_CustomCaretColor: 0
   m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
-  m_Text: Welcome to the <b>adventure</b>.
+  m_Text: 'Congratulations! You managed to become the official moderator for your
+    favorite <b><i>itsyou.tv</i></b> streamer!
+
+
+    Now, this task <i>is not</i>
+    easy, but do not fear! We are here to <i>help</i> you out. Your contributions
+    will improve the livestream for everyone who is watch<i>ing</i>, including <i>your
+    streamer</i> in charge.
+
+
+    Due to this rank upgrade, you have the same benefits
+    and features as our <b>premium plan</b> members, such as hiding the chat, and
+    taking screenshots!
+
+
+    Please <i>keep an eye on</i> the chat menu. There are
+    different tasks that you have to accomplish during the livestream, to avoid any
+    <b><i>harmful incidents</i></b> and a <i>potential end of</i> stream.
+
+
+    We
+    appreciate your efforts and wish you the best.
+
+
+    <b>itsyou.tv - Staff</b>
+
+    <i>Your
+    life. Now on-line.</i>
+
+
+    <b>For more information, read the non-disclosure
+    agreement attached with this email.</b>'
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0

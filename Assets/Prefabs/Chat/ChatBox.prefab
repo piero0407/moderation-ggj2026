@@ -505,6 +505,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   content: {fileID: 539250264109758524}
+  cannotDoTask: {fileID: 3609385602288258751}
   chatTextData: {fileID: 11400000, guid: 0bbf966efcce1034f8ec86686c4883d6, type: 2}
   chatTextPrefab: {fileID: 8673003716169582352, guid: df91465121c744c538eb68f1b3158e98, type: 3}
   randomTimer: {x: 0.5, y: 2}
