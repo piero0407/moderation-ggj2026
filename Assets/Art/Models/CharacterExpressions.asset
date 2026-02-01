@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ed5db7ee0db6a54bb5925c737a8e431, type: 3}
+  m_Name: CharacterExpressions
+  m_EditorClassIdentifier: RMC.MyProject.Runtime::CharacterExpressions
+  expressions:
+  - name: CONTENTO
+    bodySprite: {fileID: 21300000, guid: 21871365ec542824fb9b6312b8f8cb2d, type: 3}
+    faceSprite: {fileID: 21300000, guid: 97f4443c1495b2a43979ec81396bfbbd, type: 3}
+  - name: CONSTERNADO
+    bodySprite: {fileID: 21300000, guid: 21871365ec542824fb9b6312b8f8cb2d, type: 3}
+    faceSprite: {fileID: 21300000, guid: eb405eba68aa4d14ab40320b58c20406, type: 3}
+  - name: NEUTRAL
+    bodySprite: {fileID: 21300000, guid: af3b2c6c0bbbd634f923f759babb0e59, type: 3}
+    faceSprite: {fileID: 21300000, guid: 5b20508035b3fd24fb4f17d8d2d14af9, type: 3}
+  - name: ANGUSTIA
+    bodySprite: {fileID: 21300000, guid: af3b2c6c0bbbd634f923f759babb0e59, type: 3}
+    faceSprite: {fileID: 21300000, guid: b489782829389cc49aa3187c671a4431, type: 3}
+  - name: NERVIOSO1
+    bodySprite: {fileID: 21300000, guid: af3b2c6c0bbbd634f923f759babb0e59, type: 3}
+    faceSprite: {fileID: 21300000, guid: 727589187fe538c4faf6737ebc9e7170, type: 3}
+  - name: NERVIOSO2
+    bodySprite: {fileID: 21300000, guid: af3b2c6c0bbbd634f923f759babb0e59, type: 3}
+    faceSprite: {fileID: 21300000, guid: 9cf175494ae33ef40a1099fc4bed91fa, type: 3}
+  - name: BAD
+    bodySprite: {fileID: 21300000, guid: 21871365ec542824fb9b6312b8f8cb2d, type: 3}
+    faceSprite: {fileID: 21300000, guid: cc0dae02b64a9b641937969aef5c5769, type: 3}
+  - name: GOOD
+    bodySprite: {fileID: 21300000, guid: 21871365ec542824fb9b6312b8f8cb2d, type: 3}
+    faceSprite: {fileID: 21300000, guid: c811135142da17049a47322956c328cd, type: 3}
