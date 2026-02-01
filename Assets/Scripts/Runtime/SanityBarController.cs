@@ -5,11 +5,21 @@ using UnityEngine.UI;
 public class SanityBarController : MonoBehaviour
 {
     [SerializeField] private Slider sanityBarFill;
-    [SerializeField] private FloatVariable sanity; // Reference to the sanity variable
+    [SerializeField] private FloatVariable sanity;
+
+    [SerializeField] private Image maskImage;
+    [SerializeField] private Sprite happyMask, sadMask;
+
+    void Start()
+    {
+        maskImage.sprite = happyMask;
+    }
 
     void Update()
     {
-        // Assuming sanity.Value is between 0 and 1
         sanityBarFill.value = sanity.Value;
+
+        if (sanity.Value <= 0.45) maskImage.sprite = sadMask;
+        else maskImage.sprite = happyMask;
     }
 }

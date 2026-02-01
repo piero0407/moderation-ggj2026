@@ -17,7 +17,6 @@ public class MinimizeWindow : MonoBehaviour
             windowToToggle.transform.SetAsFirstSibling();
             windowToToggle.gameObject.SetActive(false);
 
-            // Set GameManager state based on the topmost active window
             var topmostWindow = parentTransform.GetChild(parentTransform.childCount - 1);
             if (topmostWindow.gameObject.activeSelf)
             {

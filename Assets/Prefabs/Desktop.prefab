@@ -809,6 +809,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: RMC.MyProject.Runtime::EventController
   eventCooldown: 8
   taskProgress: 0
+  timeSinceBegin: 0
+  gameStatus: {fileID: 3942037824250615220}
+  taskLabel: {fileID: 4591012562231890443}
   timeMultiplier: 1
 --- !u!1 &5599955598081623624
 GameObject:
@@ -1917,6 +1920,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 225fa52f61ffc7849bc4e227103b52bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: RMC.MyProject.Runtime::WindowStateData
+--- !u!114 &3942037824250615220 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7247951557735419747, guid: 9077bfa62141cd2439c6819ae33b5729, type: 3}
+  m_PrefabInstance: {fileID: 5918023521603394263}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!114 &4591012562231890443 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7896928426037315804, guid: 9077bfa62141cd2439c6819ae33b5729, type: 3}
+  m_PrefabInstance: {fileID: 5918023521603394263}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!224 &4994203073721702630 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1688834696895201841, guid: 9077bfa62141cd2439c6819ae33b5729, type: 3}

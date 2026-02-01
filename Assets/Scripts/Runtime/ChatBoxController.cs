@@ -10,7 +10,7 @@ public class ChatBoxController : MonoBehaviour
     [Header("Prefabs")]
     [SerializeField] private GameObject chatTextPrefab;
     [SerializeField] private GameObject badChatTextPrefab;
-    
+
 
     [Header("Variables")]
     [SerializeField] private Vector2 randomTimer = new Vector2(.5f, 3f);
@@ -26,23 +26,22 @@ public class ChatBoxController : MonoBehaviour
 
     void Update()
     {
-        switch(GameManager.Instance.CurrentState)
+        GameManager.GameState state = GameManager.Instance.CurrentState;
+        switch (state)
         {
             case GameManager.GameState.Evidence:
             case GameManager.GameState.Notepad:
             case GameManager.GameState.LivestreamMax:
                 if (!cannotDoTask.activeSelf) cannotDoTask.SetActive(true);
-                SpawnChatText();
                 break;
-
             case GameManager.GameState.Livestream:
                 if (cannotDoTask.activeSelf) cannotDoTask.SetActive(false);
-                SpawnChatText();
                 break;
-
             default:
                 break;
         }
+
+        if (state != GameManager.GameState.Start && state != GameManager.GameState.Paused) SpawnChatText();
     }
 
     private void SpawnChatText()
@@ -53,9 +52,8 @@ public class ChatBoxController : MonoBehaviour
             _currentTime = 0;
             _timer = Random.Range(randomTimer.x, randomTimer.y);
 
-            if(Random.Range(0f, 1f) <= badChatpercent)
+            if (Random.Range(0f, 1f) <= badChatpercent)
             {
-                // Instantiate chat text
                 ChatTextController chatTextController = Instantiate(badChatTextPrefab, content.transform).GetComponent<ChatTextController>();
                 chatTextController.SetChatText(
                     badChatTextData.Users[Random.Range(0, badChatTextData.Users.Length)],
@@ -64,7 +62,6 @@ public class ChatBoxController : MonoBehaviour
             }
             else
             {
-                // Instantiate chat text
                 ChatTextController chatTextController = Instantiate(chatTextPrefab, content.transform).GetComponent<ChatTextController>();
                 chatTextController.SetChatText(
                     chatTextData.Users[Random.Range(0, chatTextData.Users.Length)],

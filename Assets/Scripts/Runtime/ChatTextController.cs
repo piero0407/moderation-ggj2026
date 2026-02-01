@@ -39,6 +39,6 @@ public class ChatTextController : MonoBehaviour
         }
 
         chatText.text = "<i>This message has been removed.</i>";
-        chatText.color = Color.gray;
+        chatText.color = chatBoxType != ChatBoxType.Normal ? Color.lightGreen : Color.gray;
     }
 }

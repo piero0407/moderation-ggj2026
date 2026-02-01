@@ -52,6 +52,8 @@ public class LivestreamLayoutManager : MonoBehaviour
 
             cameraButton.interactable = cameraButton.enabled = true;
             hideChatImage.sprite = chatHidden;
+
+            GameManager.Instance.ChangeState(GameManager.GameState.LivestreamMax);
         }
         else
         {
@@ -66,6 +68,8 @@ public class LivestreamLayoutManager : MonoBehaviour
 
             cameraButton.interactable = cameraButton.enabled = false;
             hideChatImage.sprite = chatVisible;
+
+            GameManager.Instance.ChangeState(GameManager.GameState.Livestream);
         }
     }
 }

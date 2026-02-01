@@ -5,9 +5,10 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
     public GameState CurrentState { get; private set; }
+    public int evidenceCollected { get; private set; }
 
     [SerializeField] private FloatVariable sanity;
-    [SerializeField] private float naturalSanityDecrese = 0.1f;
+    [SerializeField] private float naturalSanityDecrese = 0.0001f;
 
     private void Awake() 
 { 

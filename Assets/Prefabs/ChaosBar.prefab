@@ -189,6 +189,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   sanityBarFill: {fileID: 7511270451940127340}
   sanity: {fileID: 11400000, guid: 4e9bdc9b4cda7944c8a9fe26f5a6c545, type: 2}
+  maskImage: {fileID: 8820883610459885397}
+  happyMask: {fileID: -626456597, guid: 47c8f76103fb18f4781c152d46fc3ac7, type: 3}
+  sadMask: {fileID: -1824330930, guid: 9a5ad6510d464944cabb8e2dc9b696a6, type: 3}
 --- !u!1 &3455936031341473055
 GameObject:
   m_ObjectHideFlags: 0
