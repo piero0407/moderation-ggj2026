@@ -822,7 +822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3136478535dee84289a6e089745c765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: RMC.MyProject.Runtime::MinimizeWindow
-  windowToToggle: {fileID: 2069853712814110273}
+  windowToToggle: {fileID: 6091455514630138975}
 --- !u!1 &7323472917684858173
 GameObject:
   m_ObjectHideFlags: 0

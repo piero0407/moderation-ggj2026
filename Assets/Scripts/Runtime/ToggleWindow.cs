@@ -1,51 +1,48 @@
+using System;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class ToggleWindow : MonoBehaviour
 {
-    [SerializeField] private GameObject[] availableWindows;
-    [SerializeField] private GameManager.GameState[] stateWindows;
+    [SerializeField] private WindowStateData[] windows;
     
     Transform parentTransform;
 
     void Start()
     {
-        parentTransform = availableWindows[0].transform.parent;
+        Debug.Log(windows,this);
+        parentTransform = windows[0].transform.parent;
     }
 
     public void ToggleWindowVisibility(int id)
     {
-        if (!availableWindows[id].activeSelf)
+        if (!windows[id].gameObject.activeSelf)
         {
-            availableWindows[id].SetActive(true);
-            availableWindows[id].transform.SetAsLastSibling();
+            windows[id].gameObject.SetActive(true);
+            windows[id].transform.SetAsLastSibling();
         }
         else
         {
-            if (availableWindows[id].transform.GetSiblingIndex() == availableWindows.Length - 1)
+            if (windows[id].transform.GetSiblingIndex() == windows.Length - 1)
             {
-                availableWindows[id].transform.SetAsFirstSibling();
-                availableWindows[id].SetActive(false);
+                windows[id].transform.SetAsFirstSibling();
+                windows[id].gameObject.SetActive(false);
             }
             else
             {
-                availableWindows[id].transform.SetAsLastSibling();
+                windows[id].transform.SetAsLastSibling();
             }
         }
 
-        for (int i = 0; i < availableWindows.Length; i++)
+        // Set GameManager state based on the topmost active window
+        var topmostWindow = parentTransform.GetChild(parentTransform.childCount - 1);
+        if (topmostWindow.gameObject.activeSelf)
         {
-            if (availableWindows[i].transform == parentTransform.GetChild(availableWindows.Length - 1))
-            {
-                if (availableWindows[i].activeSelf)
-                {
-                    GameManager.Instance.ChangeState(stateWindows[i]);
-                }
-                else
-                {
-                    GameManager.Instance.ChangeState(GameManager.GameState.None);
-                }
-                break;
-            }
+            GameManager.Instance.ChangeState(topmostWindow.GetComponent<WindowStateData>()?.WindowState ?? GameManager.GameState.None);
+        }
+        else
+        {
+            GameManager.Instance.ChangeState(GameManager.GameState.None);
         }
     }
 }
