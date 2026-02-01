@@ -16,21 +16,24 @@ public class EvidenceController : MonoBehaviour
     {
         GameManager.Instance.moderatorPerms = false;
         GameManager.Instance.ChangeState(GameManager.GameState.Win);
+        Debug.Log("we should have won by now");
     }
 
     public void createNewEvidence(String name, Color asertionColor, int type)
     {
-        GameObject.Instantiate(fileTemplate, hierarchyMaster.transform);
-        FileGenerator gen = fileTemplate.GetComponent<FileGenerator>();
+        GameObject go = Instantiate(fileTemplate, hierarchyMaster.transform);
+        FileGenerator gen = go.GetComponent<FileGenerator>();
 
         gen.RefreshIcon(fileTypes[type != 911 ? type : 2], name, asertionColor);
 
         if (type == 911)
         {
-            policeButton = gen.gameObject.GetComponent<Button>();
+            policeButton = go.GetComponent<Button>();
             if (policeButton != null)
             {
+                policeButton.onClick.RemoveAllListeners();
                 policeButton.onClick.AddListener(CallPolice);
+                Debug.Log("POLICE.");
             }
         }
 

@@ -40,6 +40,7 @@ public class ChatBoxController : MonoBehaviour
             case GameManager.GameState.Notepad:
             case GameManager.GameState.LivestreamMax:
             case GameManager.GameState.None:
+            case GameManager.GameState.Win:
                 if (!cannotDoTask.activeSelf) cannotDoTask.SetActive(true);
                 SpawnChatText();
                 break;

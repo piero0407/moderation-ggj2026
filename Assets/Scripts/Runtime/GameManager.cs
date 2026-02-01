@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AudioSource[] audioAmbience;
     [SerializeField] private AudioSource clickSource;
     [SerializeField] private AudioClip clickClip;
+    [SerializeField] private AudioClip screamClip;
     private int currentSource = -1;
 
     [SerializeField] private EvidenceController evidenceCatcher;
@@ -71,28 +72,40 @@ public class GameManager : MonoBehaviour
             case GameState.Intro:
                 if (newState == GameState.Livestream || newState == GameState.LivestreamMax ||
                     newState == GameState.Evidence || newState == GameState.Notepad || newState == GameState.None)
+                {
                     CurrentState = GameState.Start;
-                break;
-            case GameState.Evidence:
-            case GameState.Notepad:
-            case GameState.Livestream:
-            case GameState.LivestreamMax:
-            case GameState.None:
-                CurrentState = newState;
+                }
+                else
+                {
+                    CurrentState = newState;
+                }
                 break;
             default:
                 CurrentState = newState;
-                if(newState == GameState.Win)
-                {
-                    winScreen.SetActive(true);
-                    ChangeAmbiance(4);
-                }
-                if(newState == GameState.GameOver)
-                {
-                    loseScreen.SetActive(true);
-                    ChangeAmbiance(5);
-                }
                 break;
+        }
+
+        if (CurrentState == GameState.Win)
+        {
+            Debug.Log($"Attempting to show Win Screen. Ref is null? {winScreen == null}");
+
+            if (winScreen)
+            {
+                winScreen.SetActive(true);
+                winScreen.transform.SetAsLastSibling();
+            }
+            ChangeAmbiance(4);
+        }
+        else if (CurrentState == GameState.GameOver)
+        {
+            if (loseScreen) loseScreen.SetActive(true);
+            ChangeAmbiance(5);
+
+            if (clickSource && screamClip)
+            {
+                clickSource.pitch = 1.0f;
+                clickSource.PlayOneShot(screamClip);
+            }
         }
     }
 
@@ -111,19 +124,21 @@ public class GameManager : MonoBehaviour
                     ChangeState(GameState.GameOver);
                 }
                 break;
-
             default:
                 break;
         }
 
         if (Input.GetMouseButtonDown(0))
         {
-            if (EventSystem.current.IsPointerOverGameObject())
+            if (CurrentState != GameState.Win && CurrentState != GameState.GameOver)
             {
-                if (clickSource && clickClip)
+                if (EventSystem.current.IsPointerOverGameObject())
                 {
-                    clickSource.pitch = UnityEngine.Random.Range(0.8f, 1.2f);
-                    clickSource.PlayOneShot(clickClip);
+                    if (clickSource && clickClip)
+                    {
+                        clickSource.pitch = UnityEngine.Random.Range(0.8f, 1.2f);
+                        clickSource.PlayOneShot(clickClip);
+                    }
                 }
             }
         }
@@ -185,7 +200,8 @@ public class GameManager : MonoBehaviour
 
         evidenceCollected++;
 
-        if (policeAvailable == false && evidenceCollected >= 5) {
+        if (policeAvailable == false && evidenceCollected >= 5)
+        {
             evidenceCatcher.createNewEvidence("Call the police.", Color.blue, 911);
             policeAvailable = true;
         }

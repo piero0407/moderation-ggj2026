@@ -263,6 +263,10 @@ PrefabInstance:
       propertyPath: m_Colors.m_FadeDuration
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5023027459136665144, guid: 938537535c4a2b84e851275ec6c931e2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5377894055898569279, guid: 938537535c4a2b84e851275ec6c931e2, type: 3}
       propertyPath: m_IsActive
       value: 1

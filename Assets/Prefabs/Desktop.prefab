@@ -76,6 +76,7 @@ MonoBehaviour:
   - {fileID: 736263981494794457}
   clickSource: {fileID: 907559139240972755}
   clickClip: {fileID: 8300000, guid: b86fa4d85217dac4685c0c471952d584, type: 3}
+  screamClip: {fileID: 8300000, guid: feeb872ec870a5847bc82d6bb3b62bd7, type: 3}
   evidenceCatcher: {fileID: 3463615671742775555}
 --- !u!82 &907559139240972755
 AudioSource:
@@ -230,7 +231,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -327,7 +328,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -424,7 +425,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -521,7 +522,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -615,7 +616,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: fcf947d64b16170b9b64c621ece4edab, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -712,7 +713,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: f3f08ee08ad990b9a80a6a4647ed74ac, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1925,7 +1926,7 @@ PrefabInstance:
     - target: {fileID: 7354278296576976495, guid: 9077bfa62141cd2439c6819ae33b5729, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 97f4443c1495b2a43979ec81396bfbbd, type: 3}
+      objectReference: {fileID: 21300000, guid: cc0dae02b64a9b641937969aef5c5769, type: 3}
     - target: {fileID: 8438265783344551828, guid: 9077bfa62141cd2439c6819ae33b5729, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
