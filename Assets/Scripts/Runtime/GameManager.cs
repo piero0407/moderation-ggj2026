@@ -48,9 +48,6 @@ public class GameManager : MonoBehaviour
     {
         CurrentState = GameState.Intro;
         timeMultiplier = 1.0f;
-<<<<<<< HEAD
-        
-=======
 
         for (int i = 0; i < audioAmbience.Length; i++)
         {
@@ -58,7 +55,6 @@ public class GameManager : MonoBehaviour
         }
 
         ChangeAmbiance(0);
->>>>>>> ea0b2350b37b98409aa532980eb80c70c719785a
     }
 
     public void ChangeState(GameState newState)
