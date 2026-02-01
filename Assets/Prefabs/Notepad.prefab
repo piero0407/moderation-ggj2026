@@ -73,10 +73,11 @@ MonoBehaviour:
     and features as our <b>premium plan</b> members, such as hiding the chat, and
     taking screenshots!\n\nPlease <i>keep an eye on</i> the chat menu. There are
     different tasks that you have to accomplish during the livestream, to avoid any
-    <b><i>harmful incidents</i></b> and a <i>potential end of</i> stream.\n\nWe appreciate
-    your efforts and wish you the best.\n\n<b>itsyou.tv - Staff</b>\n<i>Your life.
-    Now on-line.</i>\n\n<b>For more information, read the non-disclosure agreement
-    attached with this email.</b>\u200B"
+    <b><i>harmful incidents</i></b> and a <i>potential end of</i> stream. If you
+    exit the livestream window, you're not able to do any tasks until you restore
+    the chat menu.\n\nWe appreciate your efforts and wish you the best.\n\n<b>itsyou.tv
+    - Staff</b>\n<i>Your life. Now on-line.</i>\n\n<b>For more information, read
+    the non-disclosure agreement attached with this email.</b>\u200B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2d226439165fa92eda7b2885b85d68cb, type: 2}
   m_sharedMaterial: {fileID: 3676104392036418150, guid: 2d226439165fa92eda7b2885b85d68cb, type: 2}
@@ -1394,21 +1395,22 @@ MonoBehaviour:
 
     Please <i>keep an eye on</i> the chat menu. There are
     different tasks that you have to accomplish during the livestream, to avoid any
-    <b><i>harmful incidents</i></b> and a <i>potential end of</i> stream.
+    <b><i>harmful incidents</i></b> and a <i>potential end of</i> stream. If you
+    exit the livestream window, you''re not able to do any tasks until you restore
+    the chat menu.
 
 
-    We
-    appreciate your efforts and wish you the best.
+    We appreciate your efforts and wish you the best.
 
 
-    <b>itsyou.tv - Staff</b>
+    <b>itsyou.tv
+    - Staff</b>
 
-    <i>Your
-    life. Now on-line.</i>
+    <i>Your life. Now on-line.</i>
 
 
-    <b>For more information, read the non-disclosure
-    agreement attached with this email.</b>'
+    <b>For more information,
+    read the non-disclosure agreement attached with this email.</b>'
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
