@@ -1,6 +1,4 @@
 using System;
-using System.IO;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -29,7 +27,11 @@ public class EvidenceController : MonoBehaviour
         if (type == 911)
         {
             policeButton = gen.gameObject.GetComponent<Button>();
-            if (policeButton != null) policeButton.onClick.AddListener(CallPolice);
+            if (policeButton != null)
+            {
+                policeButton.onClick.AddListener(CallPolice);
+                GameManager.Instance.ChangeState(GameManager.GameState.Win);
+            }
         }
 
         evidenceAmmount += 1;

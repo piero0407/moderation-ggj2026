@@ -106,6 +106,10 @@ public class GameManager : MonoBehaviour
             case GameState.LivestreamMax:
             case GameState.None:
                 sanity.Value -= Time.deltaTime * naturalSanityDecrese;
+                if (sanity.Value <= 0.0f)
+                {
+                    ChangeState(GameState.GameOver);
+                }
                 break;
 
             default:
