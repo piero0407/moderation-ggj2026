@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private FloatVariable sanity;
     [SerializeField] private float naturalSanityDecrese = 0.001f;
 
-    private AudioSource[] audioAmbience;
+    [SerializeField] private AudioSource[] audioAmbience;
     private int currentSource = -1;
 
     private void Awake()
