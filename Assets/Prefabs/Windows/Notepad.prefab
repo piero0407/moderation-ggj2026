@@ -1427,7 +1427,7 @@ MonoBehaviour:
     read the non-disclosure agreement attached with this email.</b>'
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
-  m_ReadOnly: 0
+  m_ReadOnly: 1
   m_RichText: 1
   m_GlobalFontAsset: {fileID: 11400000, guid: 2d226439165fa92eda7b2885b85d68cb, type: 2}
   m_OnFocusSelectAll: 1

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 871f23c081051c2488d218be8e7eb924, type: 3}
+  m_Name: SpecialData
+  m_EditorClassIdentifier: RMC.MyProject.Runtime::ChatData
+  users:
+  - yourfavorit3
+  - inv3st1ny0u
+  - m0n3y
+  - k3yg3nm1n
+  - k0ldg0ld
+  chatLines:
+  - Creo que se donde vives.
+  - "amamos tu contenido. deja de hacerte da\xF1o."
+  - te ves muy bien en persona.
+  - porque no les muestras quien eres en realidad?
+  - "quien te hizo da\xF1o?"
+  - EN DONDE ESTAS?!
+  - tienes que resistir. se que alguien te esta ayudando.
+  - porfavor, dinos como te sientes.
+  - Ese ambiente me resulta muy familiar.
+  - Porfavor, actua rapido si te sientes mal. No te presiones.

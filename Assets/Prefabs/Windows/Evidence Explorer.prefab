@@ -853,6 +853,7 @@ GameObject:
   - component: {fileID: 8238719979567396906}
   - component: {fileID: 6287132739923360622}
   - component: {fileID: 6257753448514826069}
+  - component: {fileID: 3117277458261778903}
   m_Layer: 0
   m_Name: Evidence Explorer
   m_TagString: Untagged
@@ -930,6 +931,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   windowState: 5
+--- !u!114 &3117277458261778903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5737958945752649803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a84384778a0ee61b6ac74a46e02b20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: RMC.MyProject.Runtime::EvidenceController
 --- !u!1 &7154595842066609455
 GameObject:
   m_ObjectHideFlags: 0

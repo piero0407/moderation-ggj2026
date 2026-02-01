@@ -15,9 +15,10 @@ public class FileGenerator : MonoBehaviour
         if (!itemDescription) itemDescription = gameObject.GetComponentInChildren<TMP_Text>();
     }
 
-    public void RefreshIcon(Sprite newImage = null, String newDescription = null)
+    public void RefreshIcon(Sprite newImage = null, String newDescription = null, Color textColor = new Color())
     {
         iconCanvas.sprite = newImage;
         itemDescription.text = newDescription;
+        itemDescription.color = textColor;
     }
 }

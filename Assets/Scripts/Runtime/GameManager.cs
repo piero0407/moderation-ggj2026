@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Scriptable_Objects_Architecture.Runtime.Variables;
 using UnityEngine;
@@ -13,7 +14,7 @@ public class GameManager : MonoBehaviour
 
     public float timeSinceBegin;
     public float timeMultiplier { get; private set; }
-    public bool eventTime;
+    public bool eventTime, moderatorPerms = true;
 
     public float eventCooldown = 10.0f;
     public float taskCompletion = 0.0f;
@@ -27,6 +28,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AudioSource clickSource;
     [SerializeField] private AudioClip clickClip;
     private int currentSource = -1;
+
+    private EvidenceController evidenceCatcher;
+    private bool policeAvailable = false;
 
     private void Awake()
     {
@@ -114,7 +118,7 @@ public class GameManager : MonoBehaviour
             {
                 if (clickSource && clickClip)
                 {
-                    clickSource.pitch = Random.Range(0.8f, 1.2f);
+                    clickSource.pitch = UnityEngine.Random.Range(0.8f, 1.2f);
                     clickSource.PlayOneShot(clickClip);
                 }
             }
@@ -162,6 +166,23 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
         src.volume = 1f;
+    }
+
+    public void CallEvidenceCollect(int type = 0, String extraWords = "")
+    {
+        switch (type)
+        {
+            case 1:
+                evidenceCatcher.createNewEvidence("Chat logs with " + extraWords, Color.navyBlue, 1);
+                break;
+            default:
+                break;
+        }
+
+        if (policeAvailable == false && evidenceCollected >= 5) {
+            evidenceCatcher.createNewEvidence("Call the police.", Color.blue, 911);
+            policeAvailable = true;
+        }
     }
 
 }
