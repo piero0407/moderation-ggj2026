@@ -4,18 +4,22 @@ public class ChatBoxController : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private GameObject content;
+    [SerializeField] private GameObject cannotDoTask;
     [SerializeField] private ChatData chatTextData;
     [Header("Prefabs")]
     [SerializeField] private GameObject chatTextPrefab;
+    
 
     [Header("Variables")]
     [SerializeField] private Vector2 randomTimer = new Vector2(.5f, 3f);
     private float _timer;
     private float _currentTime;
+    private bool cannotTask;
 
     void Start()
     {
         _timer = Random.Range(randomTimer.x, randomTimer.y);
+        cannotTask = false;
     }
 
     void Update()
@@ -27,6 +31,9 @@ public class ChatBoxController : MonoBehaviour
             _currentTime = 0;
             _timer = Random.Range(randomTimer.x, randomTimer.y);
         }
+
+        if (!cannotTask && cannotDoTask.activeSelf) cannotDoTask.SetActive(false);
+        else if (cannotTask && !cannotDoTask.activeSelf) cannotDoTask.SetActive(true);
     }
 
     private void SpawnChatText()
@@ -45,6 +52,20 @@ public class ChatBoxController : MonoBehaviour
 
     private void RemoveChat()
     {
+        if (!cannotTask) return;
         Destroy(content.transform.GetChild(0).gameObject);
+    }
+
+    public void DisableTaskAction(bool revert = false)
+    {
+        if (revert)
+        {
+            cannotTask = false;
+            cannotDoTask.SetActive(false);
+        } else
+        {
+            cannotTask = true;
+            cannotDoTask.SetActive(true);
+        }
     }
 }
