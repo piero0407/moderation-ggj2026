@@ -59,7 +59,8 @@ public class GameManager : MonoBehaviour
         switch (CurrentState)
         {
             case GameState.Intro:
-                if (newState == GameState.Livestream)
+                if (newState == GameState.Livestream || newState == GameState.LivestreamMax ||
+                    newState == GameState.Evidence || newState == GameState.Notepad || newState == GameState.None)
                     CurrentState = GameState.Start;
                 break;
             case GameState.Evidence:
