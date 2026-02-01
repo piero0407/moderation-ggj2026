@@ -15,10 +15,10 @@ public class EventController : MonoBehaviour
         {
             if (eventTime) eventTime = false;
             eventCooldown -= Time.deltaTime * timeMultiplier;
-            Debug.Log(eventCooldown);
         }
         else
         {
+            eventCooldown = 8.0f;
             Debug.Log("TIME FOR AN EVENT.");
             eventTime = true;
         }

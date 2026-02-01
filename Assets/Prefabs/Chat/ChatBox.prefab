@@ -173,7 +173,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -320, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &8943930958404605723
 MonoBehaviour:
@@ -507,5 +507,8 @@ MonoBehaviour:
   content: {fileID: 539250264109758524}
   cannotDoTask: {fileID: 3609385602288258751}
   chatTextData: {fileID: 11400000, guid: 0bbf966efcce1034f8ec86686c4883d6, type: 2}
+  badChatTextData: {fileID: 11400000, guid: 773cfbde8cbdc954eba3669ae6dc6028, type: 2}
   chatTextPrefab: {fileID: 8673003716169582352, guid: df91465121c744c538eb68f1b3158e98, type: 3}
+  badChatTextPrefab: {fileID: 8673003716169582352, guid: d80b6b9dd9d14b649bfb7d3d7027cab7, type: 3}
   randomTimer: {x: 0.5, y: 2}
+  badChatpercent: 0.2

@@ -76,7 +76,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 0.6886792, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -174,7 +174,7 @@ GameObject:
   - component: {fileID: 3772190804705180241}
   - component: {fileID: 8156962775756689606}
   m_Layer: 0
-  m_Name: ChatText
+  m_Name: BadChatText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -307,7 +307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   chatText: {fileID: 7751235456269868871}
-  chatBoxType: 0
+  chatBoxType: 1
   sanity: {fileID: 11400000, guid: 4e9bdc9b4cda7944c8a9fe26f5a6c545, type: 2}
 --- !u!114 &3772190804705180241
 MonoBehaviour:

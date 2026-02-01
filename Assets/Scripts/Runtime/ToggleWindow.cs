@@ -10,7 +10,6 @@ public class ToggleWindow : MonoBehaviour
 
     void Start()
     {
-        Debug.Log(windows,this);
         parentTransform = windows[0].transform.parent;
     }
 

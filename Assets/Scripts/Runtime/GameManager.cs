@@ -1,3 +1,4 @@
+using Scriptable_Objects_Architecture.Runtime.Variables;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -5,7 +6,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
     public GameState CurrentState { get; private set; }
 
-    public Transform WindowArea  { get; set; }
+    [SerializeField] private FloatVariable sanity;
+    [SerializeField] private float naturalSanityDecrese = 0.1f;
 
     private void Awake() 
 { 
@@ -40,5 +42,22 @@ public class GameManager : MonoBehaviour
     public void ChangeState(GameState newState)
     {
         CurrentState = newState;
+    }
+
+    void Update()
+    {
+        switch(CurrentState)
+        {
+            case GameState.Evidence:
+            case GameState.Notepad:
+            case GameState.Livestream:
+            case GameState.LivestreamMax:
+            case GameState.None:
+            sanity.Value -= Time.deltaTime * naturalSanityDecrese;
+                break;
+
+            default:
+                break;
+        }
     }
 }

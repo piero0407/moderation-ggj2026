@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 871f23c081051c2488d218be8e7eb924, type: 3}
+  m_Name: BadChatData
+  m_EditorClassIdentifier: RMC.MyProject.Editor::ChatData
+  users:
+  - xXShadowNinjaXx
+  - PixelatedDreamer
+  - LunaTick404
+  - GhostlyMemelord
+  - CryptoKitten420
+  - VoidWalker69
+  - NeonRageQuit
+  - SaltyMcSalterson
+  - MidnightTroller
+  - UwU_OwO_uwu
+  - BananaHammock420
+  - Error404BrainNotFound
+  - ThiccThanos
+  - YeetedMyDignity
+  - CaffeineOverdose
+  - ToxicWaffleIron
+  - KeyboardSmashGod
+  - LurkingLlama
+  - BigChungusFan69
+  - DeletedByUser
+  - SkibidiToiletLord
+  - RizzlerSupreme
+  - OhioFinalBoss
+  - MewingMaster3000
+  - NPC_Energy
+  - QuantumRizzler
+  - VoidVibesOnly
+  - SigmaGrindset420
+  - ForgottenFloppa
+  - CtrlAltDefeat
+  - DrippySkeleton
+  - PhantomPingMaster
+  - Aura points negative
+  - BrainRotCentral
+  - GlitchInTheMatrix
+  - FrostByteDemon
+  - EternalLagSwitch
+  - SoupEnjoyer99
+  - MoggedByLife
+  - NPCwithRizz
+  - TouchGrassReject
+  - MidwestEmoEnjoyer
+  - 300IQBrainrot
+  - SkibidiOhioKing
+  - MewingInSilence
+  chatLines:
+  - F*ck you

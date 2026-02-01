@@ -146,6 +146,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2277213877178737592}
+  - component: {fileID: 6299464482423833787}
   m_Layer: 0
   m_Name: ChaosBar
   m_TagString: Untagged
@@ -174,6 +175,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6299464482423833787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3312265553872747629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6275dac0203baa42acfc4e1d0c30a53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  sanityBarFill: {fileID: 7511270451940127340}
+  sanity: {fileID: 11400000, guid: 4e9bdc9b4cda7944c8a9fe26f5a6c545, type: 2}
 --- !u!1 &3455936031341473055
 GameObject:
   m_ObjectHideFlags: 0
