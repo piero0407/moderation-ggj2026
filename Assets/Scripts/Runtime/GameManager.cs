@@ -183,6 +183,8 @@ public class GameManager : MonoBehaviour
                 break;
         }
 
+        evidenceCollected++;
+
         if (policeAvailable == false && evidenceCollected >= 5) {
             evidenceCatcher.createNewEvidence("Call the police.", Color.blue, 911);
             policeAvailable = true;
