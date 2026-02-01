@@ -1,6 +1,7 @@
 using System.Collections;
 using Scriptable_Objects_Architecture.Runtime.Variables;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float naturalSanityDecrese = 0.001f;
 
     [SerializeField] private AudioSource[] audioAmbience;
+    [SerializeField] private AudioSource clickSource;
+    [SerializeField] private AudioClip clickClip;
     private int currentSource = -1;
 
     private void Awake()
@@ -91,7 +94,17 @@ public class GameManager : MonoBehaviour
                 break;
         }
 
-
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                if (clickSource && clickClip)
+                {
+                    clickSource.pitch = Random.Range(0.8f, 1.2f);
+                    clickSource.PlayOneShot(clickClip);
+                }
+            }
+        }
     }
 
     public void IncreaseComplexity()
