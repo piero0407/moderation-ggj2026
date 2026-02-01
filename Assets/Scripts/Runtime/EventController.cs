@@ -11,7 +11,7 @@ public class EventController : MonoBehaviour
     {
         GameManager gm = GameManager.Instance;
 
-        if (gm.CurrentState == GameManager.GameState.Paused || gm.CurrentState == GameManager.GameState.GameOver) return;
+        if (gm.CurrentState == GameManager.GameState.Paused || gm.CurrentState == GameManager.GameState.GameOver || gm.CurrentState == GameManager.GameState.Win) return;
 
         gm.timeSinceBegin += Time.deltaTime;
 

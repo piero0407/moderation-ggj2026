@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     public float eventCooldown = 10.0f;
     public float taskCompletion = 0.0f;
 
+    [SerializeField] private GameObject winScreen;
+    [SerializeField] private GameObject loseScreen;
     [SerializeField] private FloatVariable sanity;
     [SerializeField] private float naturalSanityDecrese = 0.001f;
 
@@ -41,7 +43,8 @@ public class GameManager : MonoBehaviour
         Evidence,
         None,
         Paused,
-        GameOver
+        GameOver,
+        Win
     }
 
     void Start()
@@ -75,6 +78,16 @@ public class GameManager : MonoBehaviour
                 break;
             default:
                 CurrentState = newState;
+                if(newState == GameState.Win)
+                {
+                    winScreen.SetActive(true);
+                    ChangeAmbiance(4);
+                }
+                if(newState == GameState.GameOver)
+                {
+                    loseScreen.SetActive(true);
+                    ChangeAmbiance(5);
+                }
                 break;
         }
     }
