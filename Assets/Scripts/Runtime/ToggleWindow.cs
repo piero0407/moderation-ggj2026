@@ -17,6 +17,7 @@ public class ToggleWindow : MonoBehaviour
             {
                 obj.SetActive(true);
                 transform.SetAsLastSibling();
+                if (obj.name == "Livestream") obj.GetComponentInChildren<ChatBoxController>().DisableTaskAction(true);
             }
             else
             {
@@ -24,15 +25,18 @@ public class ToggleWindow : MonoBehaviour
                 {
                     obj.SetActive(false);
                     transform.SetAsFirstSibling();
+                    if (obj.name == "Livestream") obj.GetComponentInChildren<ChatBoxController>().DisableTaskAction();
                 } else
                 {
                     if (transform.GetSiblingIndex() != availableWindows.Length - 1)
                     {
                         transform.SetAsLastSibling();
+                        if (obj.name == "Livestream") obj.GetComponentInChildren<ChatBoxController>().DisableTaskAction(true);
                     } else
                     {
                         obj.SetActive(false);
                         transform.SetAsFirstSibling();
+                        if (obj.name == "Livestream") obj.GetComponentInChildren<ChatBoxController>().DisableTaskAction();
                     }
                 }
             }
