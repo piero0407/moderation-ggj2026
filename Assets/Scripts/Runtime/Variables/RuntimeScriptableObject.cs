@@ -26,7 +26,7 @@ namespace Scriptable_Objects_Architecture.Runtime.Variables {
         /// Resets all instances before the scene loads.
         /// </summary>
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
-        private static void ResetAllInstances() {
+        public static void ResetAllInstances() {
             foreach (var instance in Instances) {
                 instance.OnReset();
             }

@@ -7,6 +7,10 @@ public class EvidenceController : MonoBehaviour
     [SerializeField] private GameObject fileTemplate;
     [SerializeField] private GameObject hierarchyMaster;
     [SerializeField] private Sprite[] fileTypes;
+    
+    [SerializeField] private GameObject policeSequencePrefab; 
+    [SerializeField] private Transform canvasTransform;
+    [SerializeField] private GameObject livestreamWindow;
 
     private Button policeButton;
 
@@ -15,8 +19,21 @@ public class EvidenceController : MonoBehaviour
     public void CallPolice()
     {
         GameManager.Instance.moderatorPerms = false;
-        GameManager.Instance.ChangeState(GameManager.GameState.Win);
-        Debug.Log("we should have won by now");
+        
+        if (livestreamWindow != null)
+        {
+            livestreamWindow.SetActive(true);
+            livestreamWindow.transform.SetAsLastSibling(); 
+        }
+
+        if (policeSequencePrefab != null && canvasTransform != null)
+        {
+            Instantiate(policeSequencePrefab, canvasTransform);
+        }
+        else
+        {
+            GameManager.Instance.ChangeState(GameManager.GameState.Win);
+        }
     }
 
     public void createNewEvidence(String name, Color asertionColor, int type)
@@ -33,7 +50,6 @@ public class EvidenceController : MonoBehaviour
             {
                 policeButton.onClick.RemoveAllListeners();
                 policeButton.onClick.AddListener(CallPolice);
-                Debug.Log("POLICE.");
             }
         }
 

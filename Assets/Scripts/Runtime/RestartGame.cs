@@ -12,9 +12,8 @@ public class RestartGame : MonoBehaviour
         restartTimer += Time.deltaTime;
         if (restartTimer >= restartDelay)
         {
+            RuntimeScriptableObject.ResetAllInstances();
             UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
         }
-
-        sanity.Value = 1.0f;
     }
 }

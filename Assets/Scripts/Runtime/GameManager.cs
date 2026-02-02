@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private FloatVariable sanity;
     [SerializeField] private float naturalSanityDecrese = 0.001f;
 
+    private Coroutine[] ambianceCoroutines;
     [SerializeField] private AudioSource[] audioAmbience;
     [SerializeField] private AudioSource clickSource;
     [SerializeField] private AudioClip clickClip;
@@ -37,7 +38,11 @@ public class GameManager : MonoBehaviour
     {
         if (Instance != null && Instance != this) Destroy(this);
         else Instance = this;
+
+        if (audioAmbience != null)
+            ambianceCoroutines = new Coroutine[audioAmbience.Length];
     }
+
     public enum GameState
     {
         Intro,
@@ -61,8 +66,6 @@ public class GameManager : MonoBehaviour
         {
             audioAmbience[i].volume = 0.0f;
         }
-
-        ChangeAmbiance(0);
     }
 
     public void ChangeState(GameState newState)
@@ -157,34 +160,63 @@ public class GameManager : MonoBehaviour
 
     public void ChangeAmbiance(int which)
     {
-        if (which > audioAmbience.Length - 1) return;
-        if (currentSource >= 0)
+        if (which < 0 || which >= audioAmbience.Length) return;
+        if (currentSource == which && which != 4 && which != 5) return;
+        if (currentSource >= 0 && currentSource < audioAmbience.Length && currentSource != which)
         {
-            StartCoroutine(FadeOutCore(audioAmbience[currentSource], 0.5f));
+            FadeAudio(currentSource, 0f, 0.5f);
         }
-        StartCoroutine(FadeInCore(audioAmbience[which], 0.5f));
+
+        AudioSource newSource = audioAmbience[which];
+        bool isOneShot = (which == 4 || which == 5);
+
+        if (isOneShot)
+        {
+            newSource.loop = false;
+            newSource.time = 0f;
+            newSource.Play();
+            FadeAudio(which, 1f, 0f);
+        }
+        else
+        {
+            newSource.loop = true;
+            if (!newSource.isPlaying)
+                newSource.Play();
+            FadeAudio(which, 1f, 0.5f);
+        }
+
         currentSource = which;
     }
 
-    private IEnumerator FadeOutCore(AudioSource src, float FadeTime)
+    private void FadeAudio(int index, float targetVolume, float duration)
     {
-        float startVolume = src.volume;
-        while (src.volume > 0f)
+        if (ambianceCoroutines == null) return;
+        if (ambianceCoroutines[index] != null)
         {
-            src.volume -= startVolume * Time.deltaTime / FadeTime;
-            yield return null;
+            StopCoroutine(ambianceCoroutines[index]);
         }
-        src.volume = 0f;
+        ambianceCoroutines[index] = StartCoroutine(FadeTo(audioAmbience[index], targetVolume, duration));
     }
 
-    private IEnumerator FadeInCore(AudioSource src, float FadeTime)
+    private IEnumerator FadeTo(AudioSource src, float targetVolume, float duration)
     {
-        while (src.volume < 1f)
+        if (duration <= 0f)
         {
-            src.volume += Time.deltaTime / FadeTime;
+            src.volume = targetVolume;
+            yield break;
+        }
+
+        float startVolume = src.volume;
+        float timeElapsed = 0f;
+
+        while (timeElapsed < duration)
+        {
+            src.volume = Mathf.Lerp(startVolume, targetVolume, timeElapsed / duration);
+            timeElapsed += Time.deltaTime;
             yield return null;
         }
-        src.volume = 1f;
+
+        src.volume = targetVolume;
     }
 
     public void CallEvidenceCollect(int type = 0, String extraWords = "")
