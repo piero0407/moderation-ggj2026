@@ -18,11 +18,9 @@ public class GameManager : MonoBehaviour
 
     public float eventCooldown = 10.0f;
     public float taskCompletion = 0.0f;
-
-    [SerializeField] private GameObject winScreen;
-    [SerializeField] private GameObject loseScreen;
     [SerializeField] private FloatVariable sanity;
     [SerializeField] private float naturalSanityDecrese = 0.001f;
+    [SerializeField] private int maxEvidenceToCollect = 15;
 
     private Coroutine[] ambianceCoroutines;
     [SerializeField] private AudioSource[] audioAmbience;
@@ -32,6 +30,7 @@ public class GameManager : MonoBehaviour
     private int currentSource = -1;
 
     [SerializeField] private EvidenceController evidenceCatcher;
+    [SerializeField] private TaskbarFlash evidenceFlash;
     private bool policeAvailable = false;
 
     private void Awake()
@@ -90,18 +89,10 @@ public class GameManager : MonoBehaviour
 
         if (CurrentState == GameState.Win)
         {
-            Debug.Log($"Attempting to show Win Screen. Ref is null? {winScreen == null}");
-
-            if (winScreen)
-            {
-                winScreen.SetActive(true);
-                winScreen.transform.SetAsLastSibling();
-            }
             ChangeAmbiance(4);
         }
         else if (CurrentState == GameState.GameOver)
         {
-            if (loseScreen) loseScreen.SetActive(true);
             ChangeAmbiance(5);
 
             if (clickSource && screamClip)
@@ -232,11 +223,13 @@ public class GameManager : MonoBehaviour
 
         evidenceCollected++;
 
-        if (policeAvailable == false && evidenceCollected >= 5)
+        if (policeAvailable == false && evidenceCollected >= maxEvidenceToCollect)
         {
             evidenceCatcher.createNewEvidence("Call the police.", Color.blue, 911);
             policeAvailable = true;
         }
+
+
     }
 
 }

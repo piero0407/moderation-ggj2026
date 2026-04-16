@@ -33,7 +33,6 @@ public class ToggleWindow : MonoBehaviour
             }
         }
 
-        // Set GameManager state based on the topmost active window
         var topmostWindow = parentTransform.GetChild(parentTransform.childCount - 1);
         if (topmostWindow.gameObject.activeSelf)
         {

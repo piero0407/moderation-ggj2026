@@ -13,104 +13,106 @@ MonoBehaviour:
   m_Name: ChatData
   m_EditorClassIdentifier: RMC.MyProject.Editor::ChatData
   users:
-  - xXShadowNinjaXx
-  - PixelatedDreamer
-  - LunaTick404
-  - GhostlyMemelord
-  - CryptoKitten420
-  - VoidWalker69
-  - NeonRageQuit
-  - SaltyMcSalterson
-  - MidnightTroller
-  - UwU_OwO_uwu
-  - BananaHammock420
-  - Error404BrainNotFound
-  - ThiccThanos
-  - YeetedMyDignity
-  - CaffeineOverdose
-  - ToxicWaffleIron
-  - KeyboardSmashGod
-  - LurkingLlama
-  - BigChungusFan69
-  - DeletedByUser
-  - SkibidiToiletLord
-  - RizzlerSupreme
-  - OhioFinalBoss
-  - MewingMaster3000
-  - NPC_Energy
-  - QuantumRizzler
-  - VoidVibesOnly
-  - SigmaGrindset420
-  - ForgottenFloppa
-  - CtrlAltDefeat
-  - DrippySkeleton
-  - PhantomPingMaster
-  - Aura points negative
-  - BrainRotCentral
-  - GlitchInTheMatrix
-  - FrostByteDemon
-  - EternalLagSwitch
-  - SoupEnjoyer99
-  - MoggedByLife
-  - NPCwithRizz
-  - TouchGrassReject
-  - MidwestEmoEnjoyer
-  - 300IQBrainrot
-  - SkibidiOhioKing
-  - MewingInSilence
-  - Nakama3004
-  - DarkKnight54
-  - SailorLag3
-  - xXCreepypastasXx
-  - Kiri
-  - Nekoneko
-  - Kawaiiiii2000
-  - Temsenpai
-  - KofiLover
-  - Wavewavewave
-  - Ao2000
-  - Lvl1000x
-  - Kiraxxx
-  - Yapper
-  - Dragonxkiller
-  - Hunterd
-  - Vampireknight
+  - xX_itachi_Xx
+  - gokussj5af
+  - el_amo_del_cyber
+  - Laura_92
+  - KiraJustice07
+  - __dark_angel__
+  - p0k3m0n_m4st3r
+  - SantyElMasCapo
+  - chicaemo_hxc
+  - LinkinParkFanatic
+  - tupapichulo_69
+  - xD_el_bromas_xD
+  - Sephiroth_ESP
+  - vampir0oscur0
+  - xX_Zsasuke_Uchiha_Xx
+  - juanito_cyber99
+  - ADMIN_GENERAL
+  - mAtAtAtAtA_90
+  - robertita_rbd
+  - PuroFlowLatino
+  - ___vane___
+  - kudai_f0r_3v3r
+  - SniperLegend91
+  - el_pibe_cumbia
+  - Evanescence_Girl
+  - luffi_pirata_01
+  - xX_Kira_Death_Xx
+  - d0n_ju4n_07
+  - mariposa_negra_88
+  - VegetaElAmo
+  - soy_un_pro_viste
+  - HackerSupremo
+  - gatitaxD
+  - ___neo_matrix___
+  - shikitillo94
+  - xX_Principe_Oscuro_Xx
+  - CounterStrikePro
+  - dragonrojo88
+  - z3lda_f4n
+  - ElReyDelTibia
+  - n0_m3_m1r3s
+  - MasterChief_Mex
+  - la_nina_de_tus_ojos
+  - SonicSpeed91
+  - xX_angel_caido_Xx
+  - chico_rebelde_06
+  - Alucard666
+  - pwned_u_all
+  - GamerGirl95
+  - t0ny_h4wk_99
+  - ichigo_bankai_07
+  - lokito_x_ti
+  - ___shadow___
+  - el_m4quin4_azul
+  - la_gatita_fiera
+  - xX_sephiroth_Xx
+  - puro_veneno_93
+  - MasterGamer_ESP
+  - ___vampir0___
+  - Fan_De_Panda
+  - xD_pwned_xD
+  - ZeroVampiro00
   chatLines:
-  - Hello what are you doing?
+  - Hola como estas
   - lol
-  - lmao nice
-  - Look at him go
+  - XD
+  - Me encanta ver esto!
   - Holaa, ni a mis clases llego tan temprano
   - Presente!!! Que haras hoy?
-  - Cuéntanos tu último viaje, queremos saber
+  - "Cu\xE9ntanos tu \xFAltimo viaje, queremos saber"
   - Nos encanta tu estilo, te queremos
-  - ദ്ദി◝ ⩊ ◜.ᐟ animooos!
-  - Petición para que te vistas de maid (˶˃ ᵕ ˂˶) .ᐟ.ᐟ
+  - animooos!
+  - "Petici\xF3n para que te vistas de maid (\u02F6\u02C3 \u1D55 \u02C2\u02F6) .\u141F.\u141F"
   - No te vayas, reacciona a tus videos plss
-  - Llegue tarde pero igual me quedo 
-  - Es mi primera vez acá, que buenas vibes tiene este stream
-  - Sigue asi tu puedes!!! ⸜(｡˃ ᵕ ˂ )⸝♡
-  - ¿Para cuando el stream extendido?
+  - Llegue tarde pero igual me quedo
+  - "Es mi primera vez ac\xE1, que buenas vibes tiene este stream"
+  - 'Sigue asi tu puedes!!! '
+  - "\xBFPara cuando el stream extendido?"
   - Iam mi streamer favorito
-  - Iam Nox mi pastor ૮₍ ´ ꒳ `₎ა
+  - Iam Nox mi pastor
   - No te preocupes Iam, nosotros nos preocupamos por ti
   - A mi si me alegras el dia
   - Has mejorado bastante
-  - No te desanimes seguimos aquí (˶ᵔ ᵕ ᵔ˶)
-  - Tu puedes, se nota el progreso
+  - "No te desanimes seguimos aqu\xED"
+  - tu puedes, se nota el progreso
   - Me gusta como explicas las cosas
   - Este canal se siente cozy, como en casa
-  - Eres demasiado adorableee (˶ᵔ ᵕ ᵔ˶) ‹𝟹
-  - Eres un caos pero asi te queremos (ᵕ—ᴗ—)
+  - Eres demasiado adorableee
+  - eres un caos pero asi te queremos
   - Soy tu fan, sigue subiendo contenido
   - Sigue asi Iam, tus reales fans sabemos que nos quieres
-  - Siempre puedes contar con nosotros
+  - siempre puedes contar con nosotros
   - Si necesitas descanso nosotros entenderemos
   - Dejen de acosar a Iam porfavor
   - Mod wtf con los comentarios
   - Despierten al mod
-  - Iam sube mas cosas, te extrañamos
-  - Los fieles siempre vamos a estar aquí
-  - Últimamente te veo mas cansado, ¿has mimido?
-  - Toma aguita y come algo rico (˶ᵔ ᵕ ᵔ˶) ‹𝟹
-
+  - "Iam sube mas cosas, te extra\xF1amos"
+  - "Los fieles siempre vamos a estar aqu\xED"
+  - "\xDAltimamente te veo mas cansado, \xBFhas mimido?"
+  - Toma aguita y come algo rico
+  - jajajaja
+  - jejeje
+  - Estoy de acuerdo
