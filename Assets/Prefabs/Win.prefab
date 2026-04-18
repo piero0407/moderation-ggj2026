@@ -506,6 +506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   restartDelay: 8
+  sanity: {fileID: 0}
 --- !u!1 &7342552447189434737
 GameObject:
   m_ObjectHideFlags: 0

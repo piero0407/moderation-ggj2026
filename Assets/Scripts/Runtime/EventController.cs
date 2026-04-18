@@ -36,7 +36,7 @@ public class EventController : MonoBehaviour
         {
             if (gm.eventTime)
             {
-                taskLabel.text += $" | Task progress: {Math.Round(gm.taskCompletion * 100f)}%";
+                taskLabel.text += $" | Progreso de la tarea: {Math.Round(gm.taskCompletion * 100f)}%";
             }
         }
     }

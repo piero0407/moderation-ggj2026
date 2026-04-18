@@ -65,19 +65,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Congratulations! You managed to become the official moderator for your
-    favorite <b><i>itsyou.tv</i></b> streamer!\n\nNow, this task <i>is not</i> easy,
-    but do not fear! We are here to <i>help</i> you out. Your contributions will
-    improve the livestream for everyone who is watch<i>ing</i>, including <i>your
-    streamer</i> in charge.\n\nDue to this rank upgrade, you have the same benefits
-    and features as our <b>premium plan</b> members, such as hiding the chat, and
-    taking screenshots!\n\nPlease <i>keep an eye on</i> the chat menu. There are
-    different tasks that you have to accomplish during the livestream, to avoid any
-    <b><i>harmful incidents</i></b> and a <i>potential end of</i> stream. If you
-    exit the livestream window, you're not able to do any tasks until you restore
-    the chat menu.\n\nWe appreciate your efforts and wish you the best.\n\n<b>itsyou.tv
-    - Staff</b>\n<i>Your life. Now on-line.</i>\n\n<b>For more information, read
-    the non-disclosure agreement attached with this email.</b>\u200B"
+  m_text: "Felicitaciones! Ahora eres el nuevo moderador de tu streamer de itsyou.tv
+    favorito, <b>Iam Nox</b>!\nEsta tarea no es tan facil, pero no te preocupes,
+    aqui te van unos consejos!\n\n- En el menu de chat, haz click en los mensajes
+    que veas de un color distinto. Algunos mensajes son negativos, o pueden llenar
+    el chat de cosas sin sentido. Esta tarea es muy importante como moderador!\n\n-
+    Evita que la barra se agote, significa que tu streamer no tiene la suficiente
+    energia para seguir, y cualquier cosa inesperada puede pasar.\n\n- Constantemente,
+    apareceran cosas que descargar del chat o del aplicativo de itsyou.tv directamente.
+    para ello, tienes que revisar constantemente tu carpeta de archivos. CUIDADO!
+    Cualquier otra ventana que tengas abierta que no sea nuestro aplicativo, no te
+    permitir\xE1 moderar el stream.\n\n- Cada tarea tiene un progreso, cuando la
+    barra de progreso se llene, la proxima tarea ser\xE1 mas dificil de completar.\n\nTe
+    deseamos mucha suerte.\n<i>El equipo de itsyou.tv</i>\u200B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2d226439165fa92eda7b2885b85d68cb, type: 2}
   m_sharedMaterial: {fileID: 3676104392036418150, guid: 2d226439165fa92eda7b2885b85d68cb, type: 2}
@@ -1392,39 +1392,19 @@ MonoBehaviour:
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_CustomCaretColor: 0
   m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
-  m_Text: 'Congratulations! You managed to become the official moderator for your
-    favorite <b><i>itsyou.tv</i></b> streamer!
-
-
-    Now, this task <i>is not</i>
-    easy, but do not fear! We are here to <i>help</i> you out. Your contributions
-    will improve the livestream for everyone who is watch<i>ing</i>, including <i>your
-    streamer</i> in charge.
-
-
-    Due to this rank upgrade, you have the same benefits
-    and features as our <b>premium plan</b> members, such as hiding the chat, and
-    taking screenshots!
-
-
-    Please <i>keep an eye on</i> the chat menu. There are
-    different tasks that you have to accomplish during the livestream, to avoid any
-    <b><i>harmful incidents</i></b> and a <i>potential end of</i> stream. If you
-    exit the livestream window, you''re not able to do any tasks until you restore
-    the chat menu.
-
-
-    We appreciate your efforts and wish you the best.
-
-
-    <b>itsyou.tv
-    - Staff</b>
-
-    <i>Your life. Now on-line.</i>
-
-
-    <b>For more information,
-    read the non-disclosure agreement attached with this email.</b>'
+  m_Text: "Felicitaciones! Ahora eres el nuevo moderador de tu streamer de itsyou.tv
+    favorito, <b>Iam Nox</b>!\nEsta tarea no es tan facil, pero no te preocupes,
+    aqui te van unos consejos!\n\n- En el menu de chat, haz click en los mensajes
+    que veas de un color distinto. Algunos mensajes son negativos, o pueden llenar
+    el chat de cosas sin sentido. Esta tarea es muy importante como moderador!\n\n-
+    Evita que la barra se agote, significa que tu streamer no tiene la suficiente
+    energia para seguir, y cualquier cosa inesperada puede pasar.\n\n- Constantemente,
+    apareceran cosas que descargar del chat o del aplicativo de itsyou.tv directamente.
+    para ello, tienes que revisar constantemente tu carpeta de archivos. CUIDADO!
+    Cualquier otra ventana que tengas abierta que no sea nuestro aplicativo, no te
+    permitir\xE1 moderar el stream.\n\n- Cada tarea tiene un progreso, cuando la
+    barra de progreso se llene, la proxima tarea ser\xE1 mas dificil de completar.\n\nTe
+    deseamos mucha suerte.\n<i>El equipo de itsyou.tv</i>"
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 1

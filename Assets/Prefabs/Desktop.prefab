@@ -63,7 +63,7 @@ MonoBehaviour:
   eventCooldown: 10
   taskCompletion: 0
   sanity: {fileID: 11400000, guid: 4e9bdc9b4cda7944c8a9fe26f5a6c545, type: 2}
-  naturalSanityDecrese: 0.001
+  naturalSanityDecrese: 0.005
   maxEvidenceToCollect: 15
   audioAmbience:
   - {fileID: 1246186400012300226}
@@ -76,6 +76,7 @@ MonoBehaviour:
   clickClip: {fileID: 8300000, guid: b86fa4d85217dac4685c0c471952d584, type: 3}
   screamClip: {fileID: 8300000, guid: feeb872ec870a5847bc82d6bb3b62bd7, type: 3}
   evidenceCatcher: {fileID: 3463615671742775555}
+  evidenceFlash: {fileID: 1327571135770010882}
 --- !u!82 &907559139240972755
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1452,6 +1453,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3983215599607322224, guid: 0faac02e09901364398624ecad6af0d3, type: 3}
   m_PrefabInstance: {fileID: 4578473017097927421}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1327571135770010882 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3307465226499596287, guid: 0faac02e09901364398624ecad6af0d3, type: 3}
+  m_PrefabInstance: {fileID: 4578473017097927421}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38c431b3d7c6c425ba0214fe3b6793e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: RMC.MyProject.Runtime::TaskbarFlash
 --- !u!114 &4600287180308148865 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 26318059217733756, guid: 0faac02e09901364398624ecad6af0d3, type: 3}
@@ -1578,6 +1590,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6276595710781296018}
     m_Modifications:
+    - target: {fileID: 910216640170111778, guid: 9077bfa62141cd2439c6819ae33b5729, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 910216640170111778, guid: 9077bfa62141cd2439c6819ae33b5729, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1688834696895201841, guid: 9077bfa62141cd2439c6819ae33b5729, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
